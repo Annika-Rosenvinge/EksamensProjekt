@@ -1,5 +1,6 @@
 package web.commands;
 
+import business.exceptions.UserException;
 import business.persistence.Database;
 import business.services.MaterialFacade;
 
@@ -15,15 +16,26 @@ public class MaterialUpdateCommand extends CommandProtectedPage {
         this.materialFacade = new MaterialFacade(database);
     }
 
-    public String execute(HttpServletRequest request, HttpServletResponse response){
+    @Override
+    public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException {
         String name;
         int partsPrUnit;
         String unit;
         double price;
 
         try{
-            name = 
+            name = request.getParameter("navnet på materialet");
+            price = Double.parseDouble(request.getParameter("pris på produktet"));
+
+        } catch (NumberFormatException e) {
+            request.setAttribute("error", "du har skrevet et forkert navn eller tal");
+            return "insertpage";
         }
+        request.setAttribute("navnet på materialet", name);
+        request.setAttribute("pris på produketet", price);
+
+        materialFacade.updateMaterialPrice(name,price);
+        return pageToShow;
     }
 
 }

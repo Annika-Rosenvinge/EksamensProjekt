@@ -43,14 +43,14 @@ public class MaterialMapper {
 
     }
 
-    public void updateMaterialPrice (Material material) throws UserException{
+    public void updateMaterialPrice (String name, Double price) throws UserException{
 
         try (Connection connection = database.connect()){
             String sql = "UPDATE material SET price = ? WHERE name = ?";
 
             try (PreparedStatement preparedStatement = connection.prepareStatement(sql)){
-                preparedStatement.setDouble(1,material.getPrice());
-                preparedStatement.setString(2,material.getName());
+                preparedStatement.setDouble(1,price);
+                preparedStatement.setString(2,name);
                 preparedStatement.executeUpdate();
             }
             catch (SQLException sqlException){

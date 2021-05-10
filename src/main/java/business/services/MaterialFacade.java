@@ -13,15 +13,19 @@ public class MaterialFacade {
         materialMapper = new MaterialMapper(database);
     }
 
-    public Material updateMaterialPrice(String name,int partsPrUnit, String unit, double price) throws UserException{
-        Material material = new Material(name,partsPrUnit, unit, price);
-        materialMapper.updateMaterialPrice(material);
-        return material;
-    }
 
-    public Material insertMaterial(String name, int partsPrUnit, String unit, double price) throws UserException{
+    public Material insertMaterial(String name,int partsPrUnit, String unit, double price) throws UserException{
         Material material = new Material(name, partsPrUnit, unit, price);
         materialMapper.insertMaterial(material);
         return material;
+    }
+    /*public Material updateMaterialPrice(String name,int partsPrUnit, String unit, double price) throws UserException{
+        Material material = new Material(name,partsPrUnit, unit, price);
+        materialMapper.updateMaterialPrice(material);
+        return material;
+    }*/
+
+    public void updateMaterialPrice (String name, Double price) throws UserException{
+        materialMapper.updateMaterialPrice(name, price);
     }
 }
