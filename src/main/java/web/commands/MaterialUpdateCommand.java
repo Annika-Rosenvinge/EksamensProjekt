@@ -19,8 +19,6 @@ public class MaterialUpdateCommand extends CommandProtectedPage {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException {
         String name;
-        int partsPrUnit;
-        String unit;
         double price;
 
         try{
@@ -32,7 +30,7 @@ public class MaterialUpdateCommand extends CommandProtectedPage {
             return "insertpage";
         }
         request.setAttribute("navnet på materialet", name);
-        request.setAttribute("pris på produketet", price);
+        request.setAttribute("pris på produktet", price);
 
         materialFacade.updateMaterialPrice(name,price);
         return pageToShow;

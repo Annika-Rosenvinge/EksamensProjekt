@@ -14,15 +14,17 @@
         <div style="margin-top: 5em;" class="container">
             <form name="login" action="${pageContext.request.contextPath}/fc/logincommand"  method="POST">
                 <div class="row mb-3">
-                    <label class="col-sm-1 col-form-label" for="email">Email</label>
+                    <label for="email" class="col-sm-1 col-form-label" >Email</label>
                     <div class="col-sm-4">
-                        <input class="form-control" type="text" name="email" placeholder="someone@nowhere.com">
+                        <input class="form-control" type="text" id ="email" name="email" placeholder="someone@nowhere.com">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <label class="col-sm-1 col-form-label" for="password">Password</label>
                     <div class="col-sm-4">
-                        <input class="form-control" type="password" name="password" placeholder="sesam">
+                        <label>
+                            <input class="form-control" type="password" id ="password" name="password" placeholder="sesam">
+                        </label>
                     </div>
                 </div>
                 <c:if test="${requestScope.error != null }">

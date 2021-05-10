@@ -19,21 +19,18 @@ public class FrontController extends HttpServlet
 {
     private final static String USER = "root";
     private final static String PASSWORD = "Flagremus13";
-    private final static String URL = "jdbc:mysql://localhost:3306/carport?serverTimezone=CET";
+    private final static String URL = "jdbc:mysql://localhost:3306/fogcarport?serverTimezone=CET";
 
     public static Database database;
 
     public void init() throws ServletException
     {
         // Initialize database connection
-        if (database == null)
-        {
-            try
-            {
+        if (database == null) {
+            try {
                 database = new Database(USER, PASSWORD, URL);
             }
-            catch (ClassNotFoundException ex)
-            {
+            catch (ClassNotFoundException ex) {
                 Logger.getLogger("web").log(Level.SEVERE, ex.getMessage(), ex);
             }
         }

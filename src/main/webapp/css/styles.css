@@ -7,3 +7,109 @@
 {
     font-size: smaller;
 }
+/*
+    CSS styles for the whole website
+    The file is included in the genericpage.tag template
+ */
+
+#topmenu_login_dialogue {
+    font-size: smaller;
+}
+
+.jumbotron {
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+    background-color: lightgrey;
+    border-radius: .3rem;
+}
+
+overskrift1 {
+    font-family: Dubai, serif;
+    font-size: 90px;
+    color: #272188;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+overskrift2 {
+    font-family: Dubai, serif;
+    font-size: 75px;
+    color: #f26708;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+underoverskrift1 {
+    font-family: Dubai, serif;
+    font-size: 45px;
+    color: #272188;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+underoverskrift2 {
+    font-family: Dubai, serif;
+    font-size: 27px;
+    color: #272188;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+underoverskrift3 {
+    font-family: Dubai, serif;
+    font-size: 35px;
+    color: #272188;
+    margin-right: auto;
+    margin-left: auto;
+}
+underoverskrift4 {
+    font-family: Dubai, serif;
+    font-size: 23px;
+    color: #272188;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+normaltext1 {
+    font-family: Dubai, serif;
+    font-size: 22px;
+    color: #272188;
+    margin-right: auto;
+    margin-left: auto;
+}
+pricetext{
+    font-family: Dubai, serif;
+    font-size: 16px;
+    font-style: italic;
+    color: #272188;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-light{
+    font-size: 23px;
+}
+
+button1 {
+    font-family: Dubai, serif;
+    font-size: 27px;
+    color: #272188;
+    margin-right: auto;
+    margin-left: auto;
+}
+button2 {
+    font-family: Dubai, serif;
+    font-size: 27px;
+    color: #f26708;
+    margin-right: auto;
+    margin-left: auto;
+}
+underoverskrift3a {
+    font-family: Dubai, serif;
+    font-size: 35px;
+    color: #f26708;
+    margin-right: auto;
+    margin-left: auto;
+}
+

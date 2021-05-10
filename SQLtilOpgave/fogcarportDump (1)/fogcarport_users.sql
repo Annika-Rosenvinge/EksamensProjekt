@@ -16,35 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `item_list`
+-- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `item_list`;
+DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `item_list` (
-  `item_list_id` int NOT NULL AUTO_INCREMENT,
-  `material_id` int NOT NULL,
-  `lenght` int NOT NULL,
-  `quantity` int NOT NULL,
-  `description` varchar(255) NOT NULL,
-  `price` double NOT NULL,
-  `order_id` int NOT NULL,
-  PRIMARY KEY (`item_list_id`),
-  KEY `fk_item_list_material1_idx` (`material_id`),
-  KEY `fk_item_list_order1_idx` (`order_id`),
-  CONSTRAINT `fk_item_list_material1` FOREIGN KEY (`material_id`) REFERENCES `material` (`material_id`),
-  CONSTRAINT `fk_item_list_order1` FOREIGN KEY (`order_id`) REFERENCES `order` (`order_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `users` (
+  `user_id` int NOT NULL AUTO_INCREMENT,
+  `email` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `role` varchar(45) NOT NULL,
+  `name` varchar(45) NOT NULL,
+  `adress` varchar(45) DEFAULT NULL,
+  `zipcode` int DEFAULT NULL,
+  `city` varchar(45) DEFAULT NULL,
+  `phone` int DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `item_list`
+-- Dumping data for table `users`
 --
 
-LOCK TABLES `item_list` WRITE;
-/*!40000 ALTER TABLE `item_list` DISABLE KEYS */;
-/*!40000 ALTER TABLE `item_list` ENABLE KEYS */;
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'kundedemo@test.dk','demo123','customer','Kurt Verner','Byparken 1',2500,'Valby',12345678),(2,'medarbejder@test.dk','demo123','employee','Vurt Kerner',NULL,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -56,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-07 10:07:16
+-- Dump completed on 2021-05-10 16:29:59
