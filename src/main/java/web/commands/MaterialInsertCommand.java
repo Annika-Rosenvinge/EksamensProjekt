@@ -33,7 +33,7 @@ public class MaterialInsertCommand extends CommandProtectedPage {
             name = request.getParameter("navn på materiale");
             partsPrUnit = request.getIntHeader("Hvor mange er der i en pakke/boks");
             unit = request.getParameter("STK/RULLE/PAKKE/SÆT");
-            price = request.getIntHeader("Hvad er styk prisen");
+            price = Double.parseDouble(request.getParameter("Hvad er styk prisen"));
         }
         catch (NumberFormatException ex){
             request.setAttribute("ERROR", "Du skal indtaste tal, ikke bogstaver");
