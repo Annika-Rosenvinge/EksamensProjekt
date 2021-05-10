@@ -1,5 +1,6 @@
 package web.commands;
 
+import business.entities.Material;
 import business.exceptions.UserException;
 import business.persistence.Database;
 import business.services.MaterialFacade;
@@ -45,7 +46,8 @@ public class MaterialInsertCommand extends CommandProtectedPage {
         request.setAttribute("unit",unit);
         request.setAttribute("pris",price);
 
-        materialFacade.insertMaterial(name, partsPrUnit,unit,price);
+
+        Material material = materialFacade.insertMaterial(name, partsPrUnit,unit,price);
         return pageToShow;
     }
 
