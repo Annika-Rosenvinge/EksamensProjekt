@@ -59,6 +59,10 @@
                 <a type="button" class="btn btn-sm  btn-outline-secondary"
                    href="${pageContext.request.contextPath}/fc/registerpage">Sign up</a>
             </c:if>
+            <c:if test="${sessionScope.user == customer }">
+                <a type="button" class="btn btn-sm  btn-outline-secondary"
+                    href="${pageContext.request.contextPath}/fc/orderpage">Bestil</a>
+            </c:if>
     </div>
     </c:if>
 </header>
