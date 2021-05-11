@@ -17,7 +17,7 @@ public class StatusFacade {
         return status;
     }
 
-    public Status updateStatus (String orderStatus, int orderId) throws UserException{
+    public void updateStatus (String orderStatus, int orderId) throws UserException{
         statusMapper.updateStatus(orderStatus,orderId);
     }
 }

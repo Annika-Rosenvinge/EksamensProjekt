@@ -28,8 +28,14 @@ public abstract class Command
         commands.put("registercommand", new RegisterCommand(""));
         commands.put("customerpage", new CommandProtectedPage("customerpage", "customer"));
         commands.put("employeepage", new CommandProtectedPage("employeepage", "employee"));
+        //for at opdatere materialer
         commands.put("materialupdate", new CommandProtectedPage("materialupdate", "employee"));
-        commands.put("materialupdatecommand", new MaterialUpdateCommand(" /*SIDE MANGLER FOR KONFIRMATION AT DET ER GJORT*/", "employee"));
+        commands.put("materialupdateconfirmed", new MaterialUpdateCommand("materialupdateconfirmed", "employee"));
+        //for at tilføjematerialer til databasen
+        commands.put("materialinsert",new CommandProtectedPage("materialinsert", "employee"));
+        commands.put("materialconfirmed", new MaterialInsertCommand("materialinsertconfirmed", "employee"));
+
+        //order/forespørgsel
 
     }
 

@@ -30,8 +30,8 @@ public class MaterialUpdateCommand extends CommandProtectedPage {
             request.setAttribute("error", "du har skrevet et forkert navn eller tal");
             return "insertpage";
         }
-        request.setAttribute("navnet på materialet", name);
-        request.setAttribute("pris på produktet", price);
+        request.setAttribute("name", name);
+        request.setAttribute("price", price);
 
         materialFacade.updateMaterialPrice(name,price);
         return pageToShow;

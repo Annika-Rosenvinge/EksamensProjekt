@@ -25,9 +25,8 @@ public class CreateOrderCommand extends CommandProtectedPage{
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException{
         request.getContextPath();
-        Order order;
         String orderStatus = "new";
-        Status status = new Status(orderStatus);
+        //Status status = new Status(orderStatus);
 
         User user = new User(request.getContentType(), request.getContentType(),request.getContentType(),request.getContentType());
         int length;
@@ -42,8 +41,8 @@ public class CreateOrderCommand extends CommandProtectedPage{
             request.setAttribute("ERROR","Du skal indtaste heltal");
             return "insertpage";
         }
-        request.setAttribute("Længde", length);
-        request.setAttribute("Bredde", width);
+        request.setAttribute("lenght", length);
+        request.setAttribute("width", width);
 
         statusFacade.newStatus(orderStatus);
         orderFacade.createOrder(length,width,userId,orderStatus);

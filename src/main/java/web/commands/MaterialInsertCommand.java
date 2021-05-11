@@ -41,13 +41,13 @@ public class MaterialInsertCommand extends CommandProtectedPage {
             return "insertpage";
 
         }
-        request.setAttribute("navn",name);
-        request.setAttribute("Parts Pr Unit",partsPrUnit);
+        request.setAttribute("name",name);
+        request.setAttribute("partsPrUnit",partsPrUnit);
         request.setAttribute("unit",unit);
-        request.setAttribute("pris",price);
+        request.setAttribute("price",price);
 
 
-        Material material = materialFacade.insertMaterial(name, partsPrUnit,unit,price);
+        materialFacade.insertMaterial(name, partsPrUnit,unit,price);
         return pageToShow;
     }
 
