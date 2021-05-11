@@ -11,6 +11,7 @@ public class OrderFacade {
     public OrderFacade(Database database){
         orderMapper = new OrderMapper(database);
     }
+
     public Order createOrder(int length, int width, int userId, String status) throws UserException {
         Order order = new Order(length, width, userId, status);
         orderMapper.createOrder(order);
