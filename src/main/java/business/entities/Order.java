@@ -9,8 +9,7 @@ public class Order {
 
 
 
-    public Order(int id,int length, int width, int userId, String status){
-        this.id = id;
+    public Order(int length, int width, int userId, String status){
         this.length = length;
         this.width = width;
         this.userId = userId;

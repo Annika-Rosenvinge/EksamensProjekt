@@ -16,7 +16,7 @@ public class OrderMapper {
 
     public void createOrder(Order order) throws UserException {
         try (Connection connection = database.connect()){
-            String sql = "INSERT INTO order (order_id, lenght, width, user_id, status) VALUES (?,?,?,?,?);";
+            String sql = "INSERT INTO order (order_id, lenght, width, user_id, status) VALUES (?,?,?,?,?)";
             try (PreparedStatement preparedStatement
                          = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)){
                 ResultSet ids = preparedStatement.getGeneratedKeys();
@@ -29,6 +29,9 @@ public class OrderMapper {
                 preparedStatement.setInt(3,user.getId());
                 preparedStatement.setString(4,order.getStatus());
 
+            }
+            catch (SQLException sqlException){
+                throw new UserException(sqlException.getMessage());
             }
         }
         catch (SQLException ex){
