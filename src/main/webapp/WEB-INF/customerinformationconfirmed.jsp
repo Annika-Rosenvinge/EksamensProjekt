@@ -1,3 +1,11 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Annik
+  Date: 11-05-2021
+  Time: 17:56
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -13,20 +21,15 @@
         <normaltext1>Hello ${sessionScope.email} </normaltext1>
         Velkommen til Johannes Fog carporte
 
-        <pricetext>Husk at du skal indtaste din adresse og andet kontakt information inden du
-            bestiller, ellers så bliver din ordre anulleret </pricetext>
-
+        <pricetext>Dine informationer er opdateret</pricetext>
         <div>
-            <a class = "btn btn-dark" href="${sessionScope}/fc/customerinformation"> Fortryd </a>
+            <a class = "btn btn-dark" href="${sessionScope}/fc/customerpage"> Fortryd </a>
 
         </div>
-        
-         KNAP TIl AT SE ORDRE
-         --%>
-        Role: ${sessionScope.role}
+
+
 
 
     </jsp:body>
 
 </t:genericpage>
-

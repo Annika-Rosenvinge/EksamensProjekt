@@ -78,4 +78,28 @@ public class UserMapper
         }
     }
 
+    public void updateUser (User user, String adress, int zipcode, String city, int phone) throws UserException{
+        try (Connection connection = database.connect()){
+            adress = "adress";
+            zipcode = 0;
+            city = "city";
+            phone = 0;
+            int userId= user.getId();
+            String sql = "UPDATE user SET adress = ?, zipcode = ?, city = ?, phone = ? WHERE user_id = ?";
+            try (PreparedStatement preparedStatement =connection.prepareStatement(sql)){
+                preparedStatement.setString(1,adress);
+                preparedStatement.setInt(2,zipcode);
+                preparedStatement.setString(3,city);
+                preparedStatement.setInt(4,phone);
+                preparedStatement.setInt(5,userId);
+                preparedStatement.executeUpdate();
+
+            }
+        }
+        catch (SQLException sqlException){
+            throw new UserException(sqlException.getMessage());
+        }
+    }
+
+
 }

@@ -34,9 +34,12 @@ public abstract class Command
         //for at tilføjematerialer til databasen
         commands.put("materialinsert",new CommandProtectedPage("materialinsert", "employee"));
         commands.put("materialconfirmed", new MaterialInsertCommand("materialinsertconfirmed", "employee"));
-
         //order/forespørgsel
-
+        commands.put("createorder", new CommandProtectedPage("createorder","employee"));
+        commands.put("createorderconfirmed", new CreateOrderCommand("createorderconfirmed", "employee"));
+        //opdater bruger informationer
+        commands.put("customerinformation", new CommandProtectedPage("customerinformation", "customer"));
+        commands.put("customerinformationconfirmed", new UserUpdateCommand("customerinformationconfirmed", "customer"));
     }
 
     public static Command fromPath(

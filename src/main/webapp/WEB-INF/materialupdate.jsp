@@ -12,7 +12,7 @@
 <t:genericpage>
 
     <jsp:attribute name="header">
-         Home
+         material update
     </jsp:attribute>
 
     <jsp:attribute name="footer">

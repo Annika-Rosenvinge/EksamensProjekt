@@ -13,7 +13,7 @@
 <t:genericpage>
 
     <jsp:attribute name="header">
-         Home
+         material insert
     </jsp:attribute>
 
     <jsp:attribute name="footer">

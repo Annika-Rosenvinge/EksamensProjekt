@@ -12,7 +12,7 @@
 <t:genericpage>
 
     <jsp:attribute name="header">
-         Material insert confirmed
+         Create order confirmed
     </jsp:attribute>
 
     <jsp:attribute name="footer">
@@ -24,8 +24,8 @@
             <div class = "jumbotron-fluid text-center">
                 <underoverskrift1> Fog Carporte </underoverskrift1>
                 <br>
-                <form name="deposit" action="${pageContext.request.contextPath}/fc/materialinsertconfirmed" method="POST">
-                    <normaltext1>Materialet er nu i databasen</normaltext1>
+                <form name="deposit" action="${pageContext.request.contextPath}/fc/materialupdateconfirmed" method="POST">
+                    <normaltext1>Din forespørgelse er registreret</normaltext1>
                 </form>
             </div>
 
