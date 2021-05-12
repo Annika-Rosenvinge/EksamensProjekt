@@ -11,10 +11,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class UserMapperTest {
 
-    private final static String DATABASE = "startcode";  // Change this to your own database
+    private final static String DATABASE = "fogcarport";  // Change this to your own database
     private final static String TESTDATABASE = DATABASE + "_test";
-    private final static String USER = "dev";
-    private final static String PASSWORD = "ax2";
+    private final static String USER = "root";
+    private final static String PASSWORD = "Ronaldo1303";
     private final static String URL = "jdbc:mysql://localhost:3306/" + TESTDATABASE + "?serverTimezone=CET&useSSL=false";
 
     private static Database database;
@@ -39,9 +39,9 @@ public class UserMapperTest {
                 stmt.execute("create table " + TESTDATABASE + ".users LIKE " + DATABASE + ".users;" );
                 stmt.execute(
                     "insert into users values " +
-                    "(1,'jens@somewhere.com','jensen','customer'), " +
-                    "(2,'ken@somewhere.com','kensen','customer'), " +
-                    "(3,'robin@somewhere.com','batman','employee')");
+                    "(1,'jens@somewhere.com','jensen','customer','jens'), " +
+                    "(2,'ken@somewhere.com','kensen','customer','ken'), " +
+                    "(3,'robin@somewhere.com','batman','employee','robin')");
             } catch (SQLException ex) {
             System.out.println( "Could not open connection to database: " + ex.getMessage() );
         }
