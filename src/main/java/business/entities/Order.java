@@ -2,21 +2,43 @@ package business.entities;
 
 public class Order {
     private int id; // just used to demo retrieval of autogen keys in UserMapper
-    private int material_id;
-    private int length; // Should be hashed and secured
-    private int quantity;
-    private String description;
-    private Double price;
-    private int order_id;
+    private int length;
+    private int width;
+    private int userId;
+    private String status;
 
-    public Order(int id, int material_id, int length, int quantity,
-                    String description, Double price, int order_id){
-        this.id = id;
-        this.material_id = material_id;
+    public Order(int length, int width, int userId, String status){
         this.length = length;
-        this.quantity = quantity;
-        this.description = description;
-        this.price = price;
-        this.order_id = order_id;
+        this.width = width;
+        this.userId = userId;
+        this.status = status;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public int getUser_id() {
+        return userId;
+    }
+
+    public void setUser_id(int user_id) {
+        this.userId = user_id;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
