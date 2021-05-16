@@ -6,6 +6,8 @@ package business.entities;
     Get'terne bliver brugt i MaterialMapper
 */
 
+//DO NOT CHANGE
+
 
 public class Material {
     private int id;

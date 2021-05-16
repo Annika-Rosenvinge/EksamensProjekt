@@ -1,5 +1,5 @@
 package business.entities;
-
+//DO NOT CHANGE
 public class User
 {
     private int id; // just used to demo retrieval of autogen keys in UserMapper

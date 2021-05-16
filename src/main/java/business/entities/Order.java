@@ -1,11 +1,33 @@
 package business.entities;
 
+//DO NOT CHANGE
+
 public class Order {
     private int id; // just used to demo retrieval of autogen keys in UserMapper
     private int length;
     private int width;
     private int userId;
     private String status;
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
 
     public Order(int length, int width, int userId, String status){
         this.length = length;

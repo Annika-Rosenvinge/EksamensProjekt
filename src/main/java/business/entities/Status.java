@@ -1,6 +1,5 @@
 package business.entities;
-
-import java.security.PublicKey;
+//DO NOT CHANGE
 
 public class Status {
     String status;

@@ -1,5 +1,5 @@
 package business.entities;
-
+//DO NOT CHANGE
 public class ItemList {
     private int id; // just used to demo retrieval of autogen keys in UserMapper
     private int material_id;
