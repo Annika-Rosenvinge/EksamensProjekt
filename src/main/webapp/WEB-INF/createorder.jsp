@@ -49,25 +49,25 @@
 
                     <div class="row mb-3">
 
-                        <input type="radio" class="btn-check" name="width" id="lenght1" autocomplete="off" value="${param.length}">
+                        <input type="radio" class="btn-check" name="lenght" id="lenght1" autocomplete="off" value="${param.length}">
                         <label class="btn btn-secondary" for=height1 >480</label>
 
-                        <input type="radio" class="btn-check" name="width" id="lenght2" autocomplete="off" value="${param.length}">
+                        <input type="radio" class="btn-check" name="length" id="lenght2" autocomplete="off" value="${param.length}">
                         <label class="btn btn-secondary" for=lenght2>530</label>
 
-                        <input type="radio" class="btn-check" name="width" id="lenght3" autocomplete="off"value="${param.length}">
+                        <input type="radio" class="btn-check" name="length" id="lenght3" autocomplete="off"value="${param.length}">
                         <label class="btn btn-secondary" for=lenght3>580</label>
 
-                        <input type="radio" class="btn-check" name="width" id="lenght4" autocomplete="off"value="${param.length}">
+                        <input type="radio" class="btn-check" name="length" id="lenght4" autocomplete="off"value="${param.length}">
                         <label class="btn btn-secondary" for=lenght4>630</label>
 
-                        <input type="radio" class="btn-check" name="width" id="lenght5" autocomplete="off"value="${param.length}">
+                        <input type="radio" class="btn-check" name="length" id="lenght5" autocomplete="off"value="${param.length}">
                         <label class="btn btn-secondary" for=lenght5>680</label>
 
-                        <input type="radio" class="btn-check" name="width" id="lenght6" autocomplete="off"value="${param.length}">
+                        <input type="radio" class="btn-check" name="length" id="lenght6" autocomplete="off"value="${param.length}">
                         <label class="btn btn-secondary" for=lenght6>730</label>
 
-                        <input type="radio" class="btn-check" name="width" id="lenght7" autocomplete="off"value="${param.length}">
+                        <input type="radio" class="btn-check" name="length" id="lenght7" autocomplete="off"value="${param.length}">
                         <label class="btn btn-secondary" for=lenght7>780</label>
                     </div>
 

@@ -21,7 +21,7 @@ public class ItemlistMapper {
 
         try (Connection connection = database.connect()){
             String sql = "INSERT INTO item_list (material_id,length,quantity,description, price) VALUES (?, ?, ?, ?)";
-            try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            try (PreparedStatement preparedStatement = connection.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS)) {
                 ResultSet ids = preparedStatement.getGeneratedKeys();
                 ids.next();
                 int id = ids.getInt(1);
