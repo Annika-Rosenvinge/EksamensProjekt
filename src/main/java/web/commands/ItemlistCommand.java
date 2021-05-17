@@ -2,10 +2,12 @@ package web.commands;
 
 import business.entities.ItemList;
 import business.entities.Material;
+import business.entities.Order;
 import business.exceptions.UserException;
 import business.persistence.Database;
 import business.services.ItemlistFacade;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -30,27 +32,30 @@ public class ItemlistCommand extends CommandProtectedPage {
         int quantity;
         String description;
         double price;
+        int id;
 
         try{
-            order_id = Integer.parseInt(request.getParameter(""));
-            material_id = Integer.parseInt(request.getParameter(""));
+            order_id = Integer.parseInt(request.getParameter("Skriv order id'et"));
+            material_id = Integer.parseInt(request.getParameter("Skriv materialets id"));
             length = Integer.parseInt(request.getParameter("Skriv længden på materialet"));
             quantity = Integer.parseInt(request.getParameter("Skriv antallet af materialet"));
-            description = request.getParameter("");
-            price = Double.parseDouble(request.getParameter("Indtast prisen"));
+            description = request.getParameter("beskrivelse af produktet");
+            //price = Double.parseDouble(request.getParameter("Indtast prisen"));
 
         } catch (NumberFormatException e) {
             request.setAttribute("ERROR","Du skal indtaste heltal");
             return "insertpage";
         }
+
+        price = quantity*material.getPrice();
+
         request.setAttribute("length", length);
         request.setAttribute("quantity", quantity);
         request.setAttribute("description", description);
         request.setAttribute("price", price);
         request.setAttribute("material_id",material_id);
 
-
-        itemlistFacade.createItemList(request.getContentLength(), material_id,length,quantity, description, price, order_id);
+        itemlistFacade.createItemList(material_id,length,quantity, description, price, order_id);
         return pageToShow;
     }
 

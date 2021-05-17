@@ -50,7 +50,7 @@
                     <div class="row mb-3">
 
                         <input type="radio" class="btn-check" name="lenght" id="lenght1" autocomplete="off" value="${param.length}">
-                        <label class="btn btn-secondary" for=height1 >480</label>
+                        <label class="btn btn-secondary" for=lenght1 >480</label>
 
                         <input type="radio" class="btn-check" name="length" id="lenght2" autocomplete="off" value="${param.length}">
                         <label class="btn btn-secondary" for=lenght2>530</label>

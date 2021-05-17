@@ -11,62 +11,45 @@
     <jsp:body>
         <div>
             <div class = "jumbotron-fluid text-center">
-                <underoverskrift1> Fog Carporte - Bestil din special bygget carport </underoverskrift1>
+                <underoverskrift1> Fog Carporte - Stykliste kreation </underoverskrift1>
+                <normaltext1>Husk kundens ordre nummer og hvor stor de ønsker deres carport</normaltext1>
                 <br>
-
                 <form name="deposit" action="${pageContext.request.contextPath}/fc/createitemlist" method="POST">
-                    <underoverskrift1> Spær </underoverskrift1>
-                    <input type="radio" class="btn-check" name="antal" id="spær1" autocomplete="off" value="${param.quantity}">
-                    <label class="btn btn-secondary" for="spær1">300</label>
+                    <pricetext>Indtast de materialer der skal bruges</pricetext>
 
-                    <input type="radio" class="btn-check" name="antal" id="spær2" autocomplete="off" value="${param.quantity}">
-                    <label class="btn btn-secondary" for="spær2">450</label>
+                    <label for="materialID" class = "form-label">Materiale id</label>
+                    <input type="text" class = "form-control" id = "materialID"
+                           placeholder = "7" name = "city" value ="${param.material_id}">
 
-                    <input type="radio" class="btn-check" name="antal" id="spær3" autocomplete="off" value="${param.quantity}">
-                    <label class="btn btn-secondary" for="spær3">600</label>
+                    <label for="quantity" class = "form-label">Antal</label>
+                    <input type="text" class = "form-control" id = "quantity"
+                           placeholder = "12" name = "city" value ="${param.quantity}">
 
-                    <input type="radio" class="btn-check" name="antal" id="spær4" autocomplete="off" value="${param.quantity}">
-                    <label class="btn btn-secondary" for="spær4">750</label>
+                    <label for="length" class = "form-label">Længden på materialet</label>
+                    <input type="text" class = "form-control" id = "length"
+                           placeholder = "300" name = "city" value ="${param.length}">
+
+                    <label for="description" class = "form-label">Kundens ordrenummer</label>
+                    <input type="text" class = "form-control" id = "description"
+                           placeholder = "4" name = "city" value ="${param.order_id}">
+
+                    <input class = "btn btn-primary" type = "submit" value="Submit">
                 </form>
 
+                <div class = "jumbotron-fluid text-left">
+                    <underoverskrift1>Oversigt over hvor mange spær der skal bruges i forhold til længden</underoverskrift1>
+                    <normaltext1> 9 - 480 i længden</normaltext1>
+                    <normaltext1> 10 - 530 i længden </normaltext1>
+                    <normaltext1> 11 - 580 i længden</normaltext1>
+                    <normaltext1> 12 - 630 i længden</normaltext1>
+                    <normaltext1> 13 - 680 i længden </normaltext1>
+                    <normaltext1> 14  - 730 i længden</normaltext1>
+                    <normaltext1> 15 - 780 i længden</normaltext1>
 
-                <form name="deposit" action="${pageContext.request.contextPath}/fc/createitemlist" method="POST">
-                    <underoverskrift1> Brædder </underoverskrift1>
+                </div>
 
-                    <input type="radio" class="btn-check" name="antal" id="brædder1" autocomplete="off" value="${param.quantity}">
-                    <label class="btn btn-secondary" for="brædder1">300</label>
-
-                    <input type="radio" class="btn-check" name="antal" id="brædder2" autocomplete="off" value="${param.quantity}">
-                    <label class="btn btn-secondary" for="brædder2">450</label>
-
-                    <input type="radio" class="btn-check" name="antal" id="brædder3" autocomplete="off" value="${param.quantity}">
-                    <label class="btn btn-secondary" for="brædder3">600</label>
-
-                    <input type="radio" class="btn-check" name="antal" id="brædder4" autocomplete="off" value="${param.quantity}">
-                    <label class="btn btn-secondary" for="brædder4">750</label>
-                </form>
-
-                <form name="deposit" action="${pageContext.request.contextPath}/fc/createitemlist" method="POST">
-                    <underoverskrift1> Fog Carporte - Bestil din special bygget carport </underoverskrift1>
-
-
-                </form>
-
-                <form name="deposit" action="${pageContext.request.contextPath}/fc/createitemlist" method="POST">
-                    <underoverskrift1> Fog Carporte - Bestil din special bygget carport </underoverskrift1>
-
-
-
-                </form>
-
-                <form name="deposit" action="${pageContext.request.contextPath}/fc/createitemlist" method="POST">
-                    <underoverskrift1> Fog Carporte - Bestil din special bygget carport </underoverskrift1>
-
-
-                </form>
-
-                <input class="btn btn-primary" type="submit" value="Submit">
             </div>
+
 
         </div>
     </jsp:body>

@@ -20,8 +20,8 @@ public class ItemlistMapper {
     public void createItemList (ItemList itemList) throws UserException {
 
         try (Connection connection = database.connect()){
-            String sql = "INSERT INTO item_list (material_id,length,quantity,description, price) VALUES (?, ?, ?, ?)";
-            try (PreparedStatement preparedStatement = connection.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS)) {
+            String sql = "INSERT INTO item_list (material_id,length,quantity,description, price) VALUES (?, ?, ?, ?, ?)";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
                 ResultSet ids = preparedStatement.getGeneratedKeys();
                 ids.next();
                 int id = ids.getInt(1);
@@ -32,9 +32,7 @@ public class ItemlistMapper {
                 preparedStatement.setInt(3,itemList.getQuantity());
                 preparedStatement.setString(4,itemList.getDescription());
                 preparedStatement.setDouble(5,itemList.getPrice());
-
                 preparedStatement.executeUpdate();
-
 
             }
 

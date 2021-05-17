@@ -9,9 +9,8 @@ public class ItemList {
     private Double price;
     private int order_id;
 
-    public ItemList (int id, int material_id, int length, int quantity,
+    public ItemList ( int material_id, int length, int quantity,
                     String description, Double price, int order_id){
-        this.id = id;
         this.material_id = material_id;
         this.length = length;
         this.quantity = quantity;
