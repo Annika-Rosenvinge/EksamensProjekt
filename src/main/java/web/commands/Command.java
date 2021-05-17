@@ -40,6 +40,10 @@ public abstract class Command
         //opdater bruger informationer
         commands.put("customerinformation", new CommandProtectedPage("customerinformation", "customer"));
         commands.put("customerinformationconfirmed", new UserUpdateCommand("customerinformationconfirmed", "customer"));
+        //see order customer and employee
+
+        //update status on order + confirmed
+
     }
 
     public static Command fromPath(

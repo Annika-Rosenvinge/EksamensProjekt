@@ -5,7 +5,6 @@ import business.exceptions.UserException;
 import business.persistence.Database;
 import business.services.UserFacade;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 

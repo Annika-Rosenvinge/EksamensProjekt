@@ -11,13 +11,16 @@ public class StatusFacade {
     public StatusFacade (Database database){
         statusMapper = new StatusMapper(database);
     }
+
     public Status newStatus (String orderStatus) throws UserException {
         Status status = new Status(orderStatus);
         statusMapper.newStatus(status);
         return status;
     }
 
-    public void updateStatus (String orderStatus, int orderId) throws UserException{
+    public Status updateStatus (String orderStatus, int orderId) throws UserException{
+        Status status = new Status(orderStatus);
         statusMapper.updateStatus(orderStatus,orderId);
+        return status;
     }
 }

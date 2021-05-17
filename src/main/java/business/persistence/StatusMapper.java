@@ -31,12 +31,12 @@ public class StatusMapper {
         }
     }
 
-    public void updateStatus(String status, int orderID) throws UserException{
+    public void updateStatus(String orderStatus, int orderID) throws UserException{
         try (Connection connection = database.connect()){
             String sql = "UPDATE item_list SET status = ? WHERE order_id = ?";
 
             try (PreparedStatement preparedStatement = connection.prepareStatement(sql)){
-                preparedStatement.setString(1, status);
+                preparedStatement.setString(1, orderStatus);
                 preparedStatement.setInt(2,orderID);
                 preparedStatement.executeUpdate();
             }
