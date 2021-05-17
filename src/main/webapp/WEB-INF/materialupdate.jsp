@@ -12,7 +12,7 @@
 <t:genericpage>
 
     <jsp:attribute name="header">
-         material update
+        Materiale Opdatering
     </jsp:attribute>
 
     <jsp:attribute name="footer">
@@ -44,8 +44,7 @@
 
 
             <c:if test="${sessionScope.role == 'employee' }">
-                <normaltext1>Du er nu logget ind som medarbejder</normaltext1>
-                <normaltext1><a href="fc/employeepage">Employee Page</a></normaltext1>
+                <normaltext1><a href="${pageContext.request.contextPath}/fc/employeepage">Tilbage til Medarbejderside</a></normaltext1>
             </c:if>
 
             <c:if test="${sessionScope.role == 'customer' }">
