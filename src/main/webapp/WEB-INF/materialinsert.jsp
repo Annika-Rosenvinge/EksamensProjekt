@@ -5,15 +5,17 @@
   Time: 12:43
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@page contentType="text/html" pageEncoding="UTF-8" %>
+<%--<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+Kun 1 contentType er tilladt
+--%>
+<%@ page contentType="text/html" pageEncoding="UTF-8" language="java"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <t:genericpage>
 
     <jsp:attribute name="header">
-         material insert
+        Materiale Indsætning
     </jsp:attribute>
 
     <jsp:attribute name="footer">
@@ -57,8 +59,7 @@
 
 
             <c:if test="${sessionScope.role == 'employee' }">
-                <normaltext1>Du er nu logget ind som medarbejder</normaltext1>
-                <normaltext1><a href="fc/employeepage">Employee Page</a></normaltext1>
+                <normaltext1><a href="${pageContext.request.contextPath}/fc/employeepage">Tilbage til Medarbejderside</a></normaltext1>
             </c:if>
 
             <c:if test="${sessionScope.role == 'customer' }">
