@@ -30,6 +30,13 @@
                     </div>
                 </div>
 
+                <div class="row mb-3">
+                    <label class="col-sm-1 col-form-label" for="name">Password</label>
+                    <div class="col-sm-4">
+                        <input id="name" class="form-control" type="password" name="password2" value="${param.password2}"  placeholder="Repeat the password">
+                    </div>
+                </div>
+
                 <input class="btn btn-primary" type="submit" type="submit" value="Submit">
             </form>
 
