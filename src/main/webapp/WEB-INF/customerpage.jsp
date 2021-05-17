@@ -11,19 +11,15 @@
 
     <jsp:body>
         <normaltext1>Hello ${sessionScope.email} </normaltext1>
-        Velkommen til Johannes Fog carporte
+        Velkommen til Fog carporte
 
         <pricetext>Husk at du skal indtaste din adresse og andet kontakt information inden du
-            bestiller, ellers så bliver din ordre anulleret </pricetext>
+            bestiller første gang, ellers så bliver din ordre anulleret </pricetext>
 
         <div>
             <a class = "btn btn-dark" href="${sessionScope}/fc/customerinformation"> Opdater information </a>
-
+            <a class = "btn btn-dark" href="${sessionScope}/fc/seeordercustomer"> Se dine ordre </a>
         </div>
-        
-         KNAP TIl AT SE ORDRE
-         --%>
-        Role: ${sessionScope.role}
 
 
     </jsp:body>

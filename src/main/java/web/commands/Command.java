@@ -41,9 +41,14 @@ public abstract class Command
         commands.put("customerinformation", new CommandProtectedPage("customerinformation", "customer"));
         commands.put("customerinformationconfirmed", new UserUpdateCommand("customerinformationconfirmed", "customer"));
         //see order customer and employee
+        commands.put("seeordercustomer", new SeeOrderCustomerCommand("seeordercustomer", "customer"));
+        //!!Side mangeler for employee!!
 
         //update status on order + confirmed
+        commands.put("updatestatusonorder", new CommandProtectedPage("updatestatusonorder","employee"));
+        commands.put("updatestatusonorderconfirmed", new UpdateStatusCommand("updatestatusonorderconfirmed", "employee"));
 
+        //Item list og beregner
     }
 
     public static Command fromPath(

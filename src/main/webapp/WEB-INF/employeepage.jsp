@@ -13,8 +13,8 @@
         <h1>Velkommen. </h1>
         <p>Du er logget ind som MEDARBEJDER, med user - ${sessionScope.email} <p/>
         <br>
-        <h2>Vælg Opgave <h2/>
 
+        <h2>Vælg Opgave <h2/>
         <a class = "btn btn-dark" href="${sessionScope}/fc/materialinsert"> Indsæt materiale </a>
         <a class = "btn btn-dark" href="${sessionScope}/fc/materialupdate"> Opdater materiale pris </a>
     </jsp:body>
