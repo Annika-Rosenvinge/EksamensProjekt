@@ -14,7 +14,6 @@ public class ItemlistCommand extends CommandProtectedPage {
     Database database;
 
 
-
     public ItemlistCommand(String pageToShow, String role) {
         super(pageToShow, role);
         this.itemlistFacade= new ItemlistFacade(database);
@@ -35,8 +34,8 @@ public class ItemlistCommand extends CommandProtectedPage {
         try{
             order_id = Integer.parseInt(request.getParameter(""));
             material_id = Integer.parseInt(request.getParameter(""));
-            length = Integer.parseInt(request.getParameter("Skriv længden på carporten"));
-            quantity = Integer.parseInt(request.getParameter("Skriv antallet af brædder"));
+            length = Integer.parseInt(request.getParameter("Skriv længden på materialet"));
+            quantity = Integer.parseInt(request.getParameter("Skriv antallet af materialet"));
             description = request.getParameter("");
             price = Double.parseDouble(request.getParameter("Indtast prisen"));
 
