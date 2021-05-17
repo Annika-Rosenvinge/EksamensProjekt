@@ -1,7 +1,7 @@
 package web.commands;
 
 import business.entities.ItemList;
-import business.entities.User;
+import business.entities.Material;
 import business.exceptions.UserException;
 import business.persistence.Database;
 import business.services.ItemlistFacade;
@@ -22,9 +22,12 @@ public class ItemlistCommand extends CommandProtectedPage {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException{
         request.getContextPath();
+        Material material = new Material(request.getContentType(), request.getContentLength(), request.getContentType(), request.getContentLength());
+        int material_id = material.getId();
+
         ItemList itemList;
 
-        User user = new User(request.getContentType(),request.getContentType(), request.getContentType(),request.getContentType());
+
 
 
 

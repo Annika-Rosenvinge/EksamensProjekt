@@ -47,10 +47,6 @@
                         <label class="btn btn-secondary" for=height4>750</label>
                     </div>
 
-
-                    <input class="btn btn-primary" type="submit" value="Submit">
-                </form>
-                <form name="deposit" action="${pageContext.request.contextPath}/fc/createorder" method="POST">
                     <div class="row mb-3">
 
                         <input type="radio" class="btn-check" name="width" id="lenght1" autocomplete="off" value="${param.length}">

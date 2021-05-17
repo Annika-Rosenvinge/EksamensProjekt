@@ -27,6 +27,9 @@
                 <form name="deposit" action="${pageContext.request.contextPath}/fc/materialupdateconfirmed" method="POST">
                     <normaltext1>Din forespørgelse er registreret</normaltext1>
                 </form>
+
+                <a class = "btn btn-dark" href="${sessionScope}/fc/createorder"> Lav ny forespørgsel </a>
+
             </div>
 
 

@@ -17,7 +17,7 @@
             bestiller, ellers så bliver din ordre anulleret </pricetext>
 
         <div>
-            <a class = "btn btn-dark" href="${sessionScope}/fc/customerinformation"> Fortryd </a>
+            <a class = "btn btn-dark" href="${sessionScope}/fc/customerinformation"> Opdater information </a>
 
         </div>
         

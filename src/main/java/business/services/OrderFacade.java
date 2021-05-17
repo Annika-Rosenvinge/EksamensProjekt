@@ -17,4 +17,10 @@ public class OrderFacade {
         orderMapper.createOrder(order);
         return order;
     }
+
+    public Order seeOrderCustomer (int length, int width, int userId, String status, String email) throws UserException {
+        Order order = new Order(length, width, userId, status);
+        orderMapper.seeOrderCustomer(order);
+        return order;
+    }
 }
