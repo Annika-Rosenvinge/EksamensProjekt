@@ -18,16 +18,15 @@
                 <br>
                 <form name="deposit" action="${pageContext.request.contextPath}/fc/seeorder" method="POST">
                     <div class="row mb-3">
-                        <label for="materialname" class="form-label"> Materialets navn</label>
+                        <normaltext1>For at finde din ordre, skal du indtaste din email</normaltext1>
+                        <label for="email" class="form-label"> Indtast din email</label>
                         <div class = "col-12">
-                            <input type="text" class="form-control" id="materialname"
-                                   placeholder="ex; 25X200mm tryk.imp bræt" name="name" value="${param.name}">
+                            <input type="text" class="form-control" id="email"
+                                   placeholder="jens@jensen.dk" name="name" value="${param.email}">
                         </div>
-
+                    </div>
                     <input class="btn btn-primary" type="submit" value="Submit">
                 </form>
-            </div>
-
             </div>
         </div>
 
