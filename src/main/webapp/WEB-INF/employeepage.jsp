@@ -15,7 +15,9 @@
         <br>
 
         <h2>Vælg Opgave <h2/>
-        <a class = "btn btn-dark" href="${sessionScope}/fc/materialinsert"> Indsæt materiale </a>
-        <a class = "btn btn-dark" href="${sessionScope}/fc/materialupdate"> Opdater materiale pris </a>
+        <c:if test="${sessionScope.role == 'employee' }">
+        <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/materialinsert"> Indsæt Materiale </a>
+        <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/materialupdate"> Opdater Materiale Pris </a>
+        </c:if>
     </jsp:body>
 </t:genericpage>
