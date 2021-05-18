@@ -18,6 +18,7 @@
         <c:if test="${sessionScope.role == 'employee' }">
         <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/materialinsert"> Indsæt Materiale </a>
         <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/materialupdate"> Opdater Materiale Pris </a>
+        <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/updatestatusonorder"> Updater Ordrestatus </a>
         </c:if>
     </jsp:body>
 </t:genericpage>
