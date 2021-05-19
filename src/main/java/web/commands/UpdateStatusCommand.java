@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 public class UpdateStatusCommand extends CommandProtectedPage {
 
     StatusFacade statusFacade;
-    Database database;
+
 
     public UpdateStatusCommand(String pageToShow, String role) {
         super(pageToShow, role);

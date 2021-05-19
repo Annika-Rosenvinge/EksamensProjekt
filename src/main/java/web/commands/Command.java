@@ -17,8 +17,7 @@ public abstract class Command
     private static HashMap<String, Command> commands;
     public static Database database;
 
-    private static void initCommands(Database database)
-    {
+    private static void initCommands(Database database) {
         commands = new HashMap<>();
         commands.put("index", new CommandUnprotectedPage("index"));
         commands.put("loginpage", new CommandUnprotectedPage("loginpage"));
@@ -48,7 +47,11 @@ public abstract class Command
         commands.put("updatestatusonorder", new CommandProtectedPage("updatestatusonorder","employee"));
         commands.put("updatestatusonorderconfirmed", new UpdateStatusCommand("updatestatusonorderconfirmed", "employee"));
 
-        //Item list og beregner
+        //Item list
+        commands.put("createitemlist", new CommandProtectedPage("createitemlist", "employee"));
+        commands.put("createitemlistconfirmed", new ItemlistCommand("createitemlistconfirmed", "employee"));
+
+        //pris beregner
     }
 
     public static Command fromPath(

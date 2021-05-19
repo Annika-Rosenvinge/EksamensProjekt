@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 
 public class SeeOrderCustomerCommand extends CommandProtectedPage {
     OrderFacade orderFacade;
-    Database Database;
     StatusFacade statusFacade;
 
 

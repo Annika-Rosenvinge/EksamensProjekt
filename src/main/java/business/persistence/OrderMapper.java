@@ -60,4 +60,16 @@ public class OrderMapper {
         }
 
     }
+
+    public void seeOrderEmployee() throws UserException{
+        try(Connection connection = database.connect()){
+            String sql = "SELECT * FROM order";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(sql)){
+                preparedStatement.executeUpdate();
+            }
+        }
+        catch (SQLException sqlException){
+            throw new UserException(sqlException.getMessage());
+        }
+    }
 }

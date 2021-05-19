@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 
 public class MaterialUpdateCommand extends CommandProtectedPage {
     MaterialFacade materialFacade;
-    Database database;
 
     public MaterialUpdateCommand(String pageToShow, String role) {
         super(pageToShow, role);

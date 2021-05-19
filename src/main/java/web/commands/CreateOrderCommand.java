@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 
 public class CreateOrderCommand extends CommandProtectedPage{
     OrderFacade orderFacade;
-    Database database;
     StatusFacade statusFacade;
 
     public CreateOrderCommand(String pageToShow, String role) {

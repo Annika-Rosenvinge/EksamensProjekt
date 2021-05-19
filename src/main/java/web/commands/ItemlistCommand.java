@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class ItemlistCommand extends CommandProtectedPage {
     ItemlistFacade itemlistFacade;
-    Database database;
+
 
 
     public ItemlistCommand(String pageToShow, String role) {

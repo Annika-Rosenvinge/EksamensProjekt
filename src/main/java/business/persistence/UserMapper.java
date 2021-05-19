@@ -8,6 +8,7 @@ import java.sql.*;
 public class UserMapper
 {
     private Database database;
+    User user;
 
     public UserMapper(Database database)
     {
@@ -78,7 +79,7 @@ public class UserMapper
         }
     }
 
-    public void updateUser (User user, String adress, int zipcode, String city, int phone) throws UserException{
+    public void updateUser ( String adress, int zipcode, String city, int phone) throws UserException{
         try (Connection connection = database.connect()){
             adress = "adress";
             zipcode = 0;

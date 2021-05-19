@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 public class MaterialInsertCommand extends CommandProtectedPage {
 
     MaterialFacade materialFacade;
-    Database database;
 
     public MaterialInsertCommand(String pageToShow, String role) {
         super(pageToShow, role);

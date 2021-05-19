@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 public class UserUpdateCommand extends CommandProtectedPage {
 
     UserFacade userFacade;
-    Database database;
+
 
     public UserUpdateCommand(String pageToShow, String role) {
         super(pageToShow, role);
@@ -20,7 +20,7 @@ public class UserUpdateCommand extends CommandProtectedPage {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException {
-        User user = new User(request.getContextPath(),request.getContextPath(),request.getContextPath(),request.getContextPath());
+        //User user = new User(request.getContextPath(),request.getContextPath(),request.getContextPath(),request.getContextPath());
         String adress;
         int zipcode;
         String city;
@@ -41,7 +41,7 @@ public class UserUpdateCommand extends CommandProtectedPage {
         request.setAttribute("city",city);
         request.setAttribute("phone", phone);
 
-        userFacade.updateUser(user,adress, zipcode,city,phone);
+        userFacade.updateUser(adress, zipcode,city,phone);
         return pageToShow;
     }
 }

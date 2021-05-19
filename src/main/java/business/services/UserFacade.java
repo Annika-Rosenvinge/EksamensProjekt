@@ -25,8 +25,8 @@ public class UserFacade
         userMapper.createUser(user);
         return user;
     }
-     public void updateUser(User user, String adress, int zipcode, String city, int phone) throws UserException {
-        userMapper.updateUser(user, adress, zipcode, city, phone);
+     public void updateUser(String adress, int zipcode, String city, int phone) throws UserException {
+        userMapper.updateUser(adress, zipcode, city, phone);
      }
 
 }
