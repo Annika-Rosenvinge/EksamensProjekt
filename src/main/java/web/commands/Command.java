@@ -42,7 +42,7 @@ public abstract class Command
         //see order customer and employee
         commands.put("seeordercustomer", new SeeOrderCustomerCommand("seeordercustomer", "customer"));
         //!!Side mangeler for employee!!
-
+        commands.put("seeorderemployee", new SeeOrderEmployeeCommand("seeorderemployee", "employee"));
         //update status on order + confirmed
         commands.put("updatestatusonorder", new CommandProtectedPage("updatestatusonorder","employee"));
         commands.put("updatestatusonorderconfirmed", new UpdateStatusCommand("updatestatusonorderconfirmed", "employee"));

@@ -19,5 +19,15 @@
         <property name="serverTimezone" value="CET" />
       </driver-properties>
     </data-source>
+    <data-source source="LOCAL" name="fogcarport@localhost" uuid="e534f066-20ad-4e3b-9c8c-1ccff904fbd5">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/fogcarport</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+      <driver-properties>
+        <property name="serverTimezone" value="UTC" />
+      </driver-properties>
+    </data-source>
   </component>
 </project>

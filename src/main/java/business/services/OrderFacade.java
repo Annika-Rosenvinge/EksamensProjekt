@@ -5,6 +5,8 @@ import business.exceptions.UserException;
 import business.persistence.Database;
 import business.persistence.OrderMapper;
 
+import java.util.List;
+
 public class OrderFacade {
     OrderMapper orderMapper;
 
@@ -24,8 +26,8 @@ public class OrderFacade {
         return order;
     }
 
-    public void seeOrderEmployee() throws UserException {
-        orderMapper.seeOrderEmployee();
+    public List<Order> seeOrderEmployee() throws UserException {
+        return orderMapper.seeOrderEmployee();
     }
 
 }

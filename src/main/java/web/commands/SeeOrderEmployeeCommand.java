@@ -1,9 +1,7 @@
 package web.commands;
 
 import business.entities.Order;
-import business.entities.User;
 import business.exceptions.UserException;
-import business.persistence.Database;
 import business.services.OrderFacade;
 import business.services.StatusFacade;
 
@@ -11,17 +9,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
-
-public class SeeOrderCustomerCommand extends CommandProtectedPage {
+public class SeeOrderEmployeeCommand extends CommandProtectedPage {
     OrderFacade orderFacade;
     StatusFacade statusFacade;
 
-
-    public SeeOrderCustomerCommand(String pageToShow, String role) {
+    public SeeOrderEmployeeCommand(String pageToShow, String role) {
         super(pageToShow, role);
         this.orderFacade = new OrderFacade(database);
     }
-
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException {
         /* request.getContextPath();
@@ -40,7 +35,7 @@ public class SeeOrderCustomerCommand extends CommandProtectedPage {
         request.setAttribute("email", email);
 */
         List<Order> allorders = orderFacade.seeOrderEmployee();
-        request.setAttribute("orders",allorders);
+        request.setAttribute("orders", allorders);
         return pageToShow;
     }
 }
