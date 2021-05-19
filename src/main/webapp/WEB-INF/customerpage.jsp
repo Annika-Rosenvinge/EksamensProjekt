@@ -16,11 +16,12 @@
         <pricetext>Husk at du skal indtaste din adresse og andet kontakt information inden du
             bestiller første gang, ellers så bliver din ordre anulleret </pricetext>
 
-        <div>
-            <a class = "btn btn-dark" href="${sessionScope}/fc/customerinformation"> Opdater information </a>
-            <a class = "btn btn-dark" href="${sessionScope}/fc/seeordercustomer"> Se dine ordre </a>
-        </div>
 
+        <div>
+            <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/customerinformation"> Opdater information </a>
+            <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/seeordercustomer"> Se dine ordre </a>
+            <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/createorder"> Ny ordre </a>
+        </div>
 
     </jsp:body>
 
