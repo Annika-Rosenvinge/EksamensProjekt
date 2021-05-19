@@ -19,19 +19,19 @@
 
                     <label for="materialID" class = "form-label">Materiale id</label>
                     <input type="text" class = "form-control" id = "materialID"
-                           placeholder = "7" name = "city" value ="${param.material_id}">
+                           placeholder = "7" name = "materialID" value ="${param.material_id}">
 
                     <label for="quantity" class = "form-label">Antal</label>
                     <input type="text" class = "form-control" id = "quantity"
-                           placeholder = "12" name = "city" value ="${param.quantity}">
+                           placeholder = "12" name = "quantity" value ="${param.quantity}">
 
                     <label for="length" class = "form-label">Længden på materialet</label>
                     <input type="text" class = "form-control" id = "length"
-                           placeholder = "300" name = "city" value ="${param.length}">
+                           placeholder = "300" name = "lenght" value ="${param.length}">
 
                     <label for="description" class = "form-label">Kundens ordrenummer</label>
                     <input type="text" class = "form-control" id = "description"
-                           placeholder = "4" name = "city" value ="${param.order_id}">
+                           placeholder = "4" name = "description" value ="${param.order_id}">
 
                     <input class = "btn btn-primary" type = "submit" value="Submit">
                 </form>

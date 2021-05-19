@@ -51,7 +51,11 @@ public abstract class Command
         commands.put("createitemlist", new CommandProtectedPage("createitemlist", "employee"));
         commands.put("createitemlistconfirmed", new ItemlistCommand("createitemlistconfirmed", "employee"));
 
-        //pris beregner
+        //pris beregner for medarbejder
+        commands.put("calculatetotalprice", new CommandProtectedPage("calculatetotalprice", "employee"));
+        commands.put("calculatepriceconfirmed", new CalculatePriceCommand("calulatepriceconfirmed", "employee"));
+
+        //prisberegner for kunde
     }
 
     public static Command fromPath(

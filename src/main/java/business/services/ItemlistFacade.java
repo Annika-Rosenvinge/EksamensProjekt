@@ -16,4 +16,8 @@ public class ItemlistFacade {
         return itemList;
     }
 
+    public void calculatePrice (int order_id) throws UserException {
+        itemMapper.calculatePrice(order_id);
+    }
+
 }

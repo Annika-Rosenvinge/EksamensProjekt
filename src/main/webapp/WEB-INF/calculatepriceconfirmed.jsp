@@ -1,3 +1,5 @@
+<%@ page import="web.commands.CalculatePriceCommand" %>
+<%@ page import="business.persistence.ItemlistMapper" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -13,11 +15,9 @@
         <normaltext1>Hello ${sessionScope.email} </normaltext1>
         Velkommen til Johannes Fog carporte
 
-        <pricetext>Det er nu tilføjet til det til kundens ordre </pricetext>
+        <pricetext>Dette er prisen</pricetext>
         <div>
-            <a class = "btn btn-dark" href="${sessionScope}/fc/createitemlist"> Tilføj mere </a>
-            <a class = "btn btn-dark" href="${sessionScope}/fc/employeepage"> Gå til medarbejder siden </a>
-
+            ${requestScope.price}
         </div>
 
 

@@ -2,12 +2,15 @@ package business.persistence;
 
 import business.entities.ItemList;
 import business.entities.Material;
+import business.entities.Order;
 import business.exceptions.UserException;
 import java.sql.*;
+import java.util.ArrayList;
 
 //IKKE FÆRDIG
 
 public class ItemlistMapper {
+ //= new ArrayList<Double>
 
     private Database database;
     Material material;
@@ -45,4 +48,34 @@ public class ItemlistMapper {
             throw new UserException(sqlException.getMessage());
         }
     }
+
+    public void calculatePrice(int orderId) throws UserException{
+        ArrayList<Double> orderprice = new ArrayList<Double>();
+        Double price = 0.1;
+        try (Connection connection = database.connect()){
+            String sql = "SELECT price FROM item_list WHERE order_id = ?";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(sql)){
+                preparedStatement.setInt(1, orderId);
+                preparedStatement.executeUpdate();
+                ResultSet resultSet = preparedStatement.executeQuery(sql);
+                while (resultSet.next()){
+                    orderprice.add(resultSet.getDouble("price"));
+                }
+                for (Double op : orderprice) {
+                    price = price + op;
+                }
+            }
+            catch (SQLException sqlException){
+                throw new UserException(sqlException.getMessage());
+            }
+        }
+
+        catch (SQLException sqlException){
+            throw new UserException(sqlException.getMessage());
+        }
+        //System.out.println(totalprice);
+
+    }
+
+
 }

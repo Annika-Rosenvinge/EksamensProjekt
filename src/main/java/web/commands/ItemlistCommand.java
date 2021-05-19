@@ -15,7 +15,6 @@ public class ItemlistCommand extends CommandProtectedPage {
     ItemlistFacade itemlistFacade;
 
 
-
     public ItemlistCommand(String pageToShow, String role) {
         super(pageToShow, role);
         this.itemlistFacade= new ItemlistFacade(database);
