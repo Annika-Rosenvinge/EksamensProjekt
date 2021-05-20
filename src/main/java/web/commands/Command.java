@@ -41,21 +41,20 @@ public abstract class Command
         commands.put("customerinformationconfirmed", new UserUpdateCommand("customerinformationconfirmed", "customer"));
         //see order customer and employee
         commands.put("seeordercustomer", new SeeOrderCustomerCommand("seeordercustomer", "customer"));
-        //!!Side mangeler for employee!!
+        //!!Side mangler for employee!!
+
         commands.put("seeorderemployee", new SeeOrderEmployeeCommand("seeorderemployee", "employee"));
         //update status on order + confirmed
         commands.put("updatestatusonorder", new CommandProtectedPage("updatestatusonorder","employee"));
         commands.put("updatestatusonorderconfirmed", new UpdateStatusCommand("updatestatusonorderconfirmed", "employee"));
-
         //Item list
         commands.put("createitemlist", new CommandProtectedPage("createitemlist", "employee"));
         commands.put("createitemlistconfirmed", new ItemlistCommand("createitemlistconfirmed", "employee"));
-
         //pris beregner for medarbejder
         commands.put("calculatetotalprice", new CommandProtectedPage("calculatetotalprice", "employee"));
         commands.put("calculatepriceconfirmed", new CalculatePriceCommand("calulatepriceconfirmed", "employee"));
-
         //prisberegner for kunde
+        commands.put("calculatepricecustomer", new CustomerPriceCommand("calculatepricecustomer", "customer"));
     }
 
     public static Command fromPath(
