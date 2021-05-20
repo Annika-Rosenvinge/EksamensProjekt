@@ -66,6 +66,7 @@ public class OrderMapper {
     public List<Order> seeOrderEmployee() throws UserException {
         List<Order> AllOrders = new ArrayList<>();
         // TO DO Loop igennem Restultatet fra databasen
+        return AllOrders;
     }
 
     /*

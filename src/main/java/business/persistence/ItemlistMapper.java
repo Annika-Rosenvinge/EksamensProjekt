@@ -2,7 +2,6 @@ package business.persistence;
 
 import business.entities.ItemList;
 import business.entities.Material;
-import business.entities.Order;
 import business.exceptions.UserException;
 import java.sql.*;
 import java.util.ArrayList;
@@ -49,7 +48,7 @@ public class ItemlistMapper {
         }
     }
 
-    public void calculatePrice(int orderId) throws UserException{
+    public Double calculatePrice(int orderId) throws UserException{
         ArrayList<Double> orderprice = new ArrayList<>();
         Double price = 0.1;
         try (Connection connection = database.connect()){
@@ -64,6 +63,7 @@ public class ItemlistMapper {
                 for (Double op : orderprice) {
                     price = price + op;
                 }
+                return price;
             }
             catch (SQLException sqlException){
                 throw new UserException(sqlException.getMessage());
