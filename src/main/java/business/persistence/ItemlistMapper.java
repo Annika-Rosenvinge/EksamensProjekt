@@ -50,7 +50,7 @@ public class ItemlistMapper {
     }
 
     public void calculatePrice(int orderId) throws UserException{
-        ArrayList<Double> orderprice = new ArrayList<Double>();
+        ArrayList<Double> orderprice = new ArrayList<>();
         Double price = 0.1;
         try (Connection connection = database.connect()){
             String sql = "SELECT price FROM item_list WHERE order_id = ?";
@@ -74,6 +74,22 @@ public class ItemlistMapper {
             throw new UserException(sqlException.getMessage());
         }
         //System.out.println(totalprice);
+
+    }
+
+    public void customerPrice(int order_id) throws UserException {
+        try (Connection connection = database.connect()){
+            String sql = "SELECT * FROM item_list WHERE order_id = ?";
+            try(PreparedStatement preparedStatement = connection.prepareStatement(sql)){
+                preparedStatement.setInt(1, order_id);
+            }
+            catch (SQLException sqlException){
+                throw new UserException(sqlException.getMessage());
+            }
+
+        } catch (SQLException sqlException) {
+            throw new UserException(sqlException.getMessage());
+        }
 
     }
 

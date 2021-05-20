@@ -30,4 +30,8 @@ public class OrderFacade {
         return orderMapper.seeOrderEmployee();
     }
 
+    /*public void seeOrderEmployee() throws UserException {
+        orderMapper.seeOrderEmployee();
+    }*/
+
 }

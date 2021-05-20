@@ -20,4 +20,7 @@ public class ItemlistFacade {
         itemMapper.calculatePrice(order_id);
     }
 
+    public void customerPrice(int order_id) throws UserException {
+        itemMapper.customerPrice(order_id);
+    }
 }
