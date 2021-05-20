@@ -34,17 +34,17 @@
                                    placeholder="25X200mm tryk.imp bræt" name="name" value="${param.name}">
                         </div>--%>
 
-                        <input type="radio" class="btn-check" name="width" id="height1" autocomplete="off" value="${param.width}">
-                        <label class="btn btn-secondary" for=height1 >300</label>
+                        <input type="radio" class="btn-check" name="width" id="width1" autocomplete="off" value="${param.width}">
+                        <label class="btn btn-secondary" for=width1 >300</label>
 
-                        <input type="radio" class="btn-check" name="width" id="height2" autocomplete="off" value="${param.width}">
-                        <label class="btn btn-secondary" for=height2>450</label>
+                        <input type="radio" class="btn-check" name="width" id="width2" autocomplete="off" value="${param.width}">
+                        <label class="btn btn-secondary" for=width2>450</label>
 
-                        <input type="radio" class="btn-check" name="width" id="height3" autocomplete="off"value="${param.width}">
-                        <label class="btn btn-secondary" for=height3>600</label>
+                        <input type="radio" class="btn-check" name="width" id="width3" autocomplete="off"value="${param.width}">
+                        <label class="btn btn-secondary" for=width3>600</label>
 
-                        <input type="radio" class="btn-check" name="width" id="height4" autocomplete="off"value="${param.width}">
-                        <label class="btn btn-secondary" for=height4>750</label>
+                        <input type="radio" class="btn-check" name="width" id="width4" autocomplete="off"value="${param.width}">
+                        <label class="btn btn-secondary" for=width4>750</label>
                     </div>
 
                     <div class="row mb-3">

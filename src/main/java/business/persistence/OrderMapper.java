@@ -18,7 +18,7 @@ public class OrderMapper {
 
     public void createOrder(Order order) throws UserException {
         try (Connection connection = database.connect()){
-            String sql = "INSERT INTO order (order_id, length, width, user_id, status) VALUES (?,?,?,?,?)";
+            String sql = "INSERT INTO 'order' (order_id, length, width, user_id, status) VALUES (?,?,?,?,?)";
             try (PreparedStatement preparedStatement
                          = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)){
                 ResultSet ids = preparedStatement.getGeneratedKeys();
@@ -47,7 +47,7 @@ public class OrderMapper {
         //userid skal kun med da det er en kunde og de ikke skal kunne se alle ordre
         String email = user.getEmail();
         try (Connection connection = database.connect()){
-            String sql = "SELECT * FROM order WHERE user_id = ? AND email = ?";
+            String sql = "SELECT * FROM 'order' WHERE user_id = ? AND email = ?";
             try (PreparedStatement preparedStatement = connection.prepareStatement(sql)){
                 preparedStatement.setInt(1,user_id);
                 preparedStatement.setString(2,email);
