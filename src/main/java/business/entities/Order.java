@@ -48,10 +48,6 @@ public class Order {
         this.width = width;
     }
 
-    public int getUser_id() {
-        return userId;
-    }
-
     public void setUser_id(int user_id) {
         this.userId = user_id;
     }

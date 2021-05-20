@@ -84,4 +84,8 @@ public class UserMapperTest {
         User retrieved = userMapper.login( "king@kong.com", "uhahvorhemmeligt" );
         assertEquals( "konge", retrieved.getRole() );
     }
+
+    @Test
+    void createUser() {
+    }
 }
