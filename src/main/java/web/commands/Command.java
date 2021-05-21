@@ -47,9 +47,11 @@ public abstract class Command
         //update status on order + confirmed
         commands.put("updatestatusonorder", new CommandProtectedPage("updatestatusonorder","employee"));
         commands.put("updatestatusonorderconfirmed", new UpdateStatusCommand("updatestatusonorderconfirmed", "employee"));
-        //Item list
+        //Item list - SKAL LAVES OM
+        commands.put("addtoitemlist", new CommandProtectedPage("addtoitemlist", "employee"));
         commands.put("createitemlist", new CommandProtectedPage("createitemlist", "employee"));
-        commands.put("createitemlistconfirmed", new ItemlistCommand("createitemlistconfirmed", "employee"));
+        commands.put("createitemlistconfirmed", new CreateItemListCommand("createitemlistconfirmed", "employee"));
+        commands.put("addtoitemlistconfirmed", new AddToItemlistCommand("createitemlistconfirmed", "employee"));
         //pris beregner for medarbejder
         commands.put("calculatetotalprice", new CommandProtectedPage("calculatetotalprice", "employee"));
         commands.put("calculatepriceconfirmed", new CalculatePriceCommand("calulatepriceconfirmed", "employee"));

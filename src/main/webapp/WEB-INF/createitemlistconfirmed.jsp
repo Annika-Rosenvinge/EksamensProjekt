@@ -15,7 +15,7 @@
 
         <pricetext>Det er nu tilføjet til det til kundens ordre </pricetext>
         <div>
-            <a class = "btn btn-dark" href="${sessionScope}/fc/createitemlist"> Tilføj mere </a>
+            <a class = "btn btn-dark" href="${sessionScope}/fc/addtoitemlist"> Tilføj mere </a>
             <a class = "btn btn-dark" href="${sessionScope}/fc/employeepage"> Gå til medarbejder siden </a>
 
         </div>
