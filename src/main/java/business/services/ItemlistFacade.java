@@ -1,6 +1,7 @@
 package business.services;
 
 import business.entities.ItemList;
+import business.entities.Order;
 import business.exceptions.UserException;
 import business.persistence.Database;
 import business.persistence.ItemlistMapper;
@@ -10,9 +11,13 @@ public class ItemlistFacade {
 
     public ItemlistFacade(Database database){itemMapper = new ItemlistMapper(database);}
 
-    public ItemList createItemList(int material_id, int length, int quantity, String description, Double price, int order_id)throws UserException {
+    public void createItemList (int orderId) throws UserException {
+        itemMapper.createItemList(orderId);
+    }
+
+    public ItemList addToItemList(int material_id, int length, int quantity, String description, Double price, int order_id)throws UserException {
         ItemList itemList = new ItemList( material_id, length, quantity, description, price, order_id);
-        itemMapper.createItemList(itemList);
+        itemMapper.AddToItemList(itemList);
         return itemList;
     }
 

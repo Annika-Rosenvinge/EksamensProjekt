@@ -1,21 +1,16 @@
 package web.commands;
 
-import business.entities.ItemList;
 import business.entities.Material;
-import business.entities.Order;
 import business.exceptions.UserException;
-import business.persistence.Database;
 import business.services.ItemlistFacade;
-
-import javax.persistence.criteria.CriteriaBuilder;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class ItemlistCommand extends CommandProtectedPage {
+public class AddToItemlistCommand extends CommandProtectedPage {
     ItemlistFacade itemlistFacade;
 
 
-    public ItemlistCommand(String pageToShow, String role) {
+    public AddToItemlistCommand(String pageToShow, String role) {
         super(pageToShow, role);
         this.itemlistFacade= new ItemlistFacade(database);
     }
@@ -54,7 +49,7 @@ public class ItemlistCommand extends CommandProtectedPage {
         request.setAttribute("price", price);
         request.setAttribute("material_id",material_id);
 
-        itemlistFacade.createItemList(material_id,length,quantity, description, price, order_id);
+        itemlistFacade.addToItemList(material_id,length,quantity, description, price, order_id);
         return pageToShow;
     }
 
