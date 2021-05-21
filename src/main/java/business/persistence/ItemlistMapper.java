@@ -21,7 +21,6 @@ public class ItemlistMapper {
         this.database = database;
     }
 
-
     public void AddToItemList (ItemList itemList) throws UserException {
 
         try (Connection connection = database.connect()){
@@ -47,7 +46,6 @@ public class ItemlistMapper {
             throw new UserException(sqlException.getMessage());
         }
     }
-
 
     //dette er den nye måde at lave en itemlist på, det kommer til at være med if statements og
     //der kommer til at være kommentare undervejs.
@@ -1870,7 +1868,7 @@ public class ItemlistMapper {
                     orderprice.add(resultSet.getDouble("price"));
                 }
                 for (Double op : orderprice) {
-                    price = price + op;
+                    price = price + (op * 1.40);
                 }
                 return price;
             }
@@ -1883,6 +1881,23 @@ public class ItemlistMapper {
             throw new UserException(sqlException.getMessage());
         }
         //System.out.println(totalprice);
+
+    }
+
+    public void seeItemList(int orderId) throws UserException{
+        try (Connection connection = database.connect()){
+            String sql = "SELECT * FROM itemlist WHERE order_id = ?";
+            try(PreparedStatement preparedStatement = connection.prepareStatement(sql)){
+                preparedStatement.setInt(1,orderId);
+                preparedStatement.executeUpdate();
+            }
+            catch (SQLException sqlException){
+                throw new UserException(sqlException.getMessage());
+            }
+        }
+        catch (SQLException sqlException){
+            throw new UserException(sqlException.getMessage());
+        }
 
     }
 

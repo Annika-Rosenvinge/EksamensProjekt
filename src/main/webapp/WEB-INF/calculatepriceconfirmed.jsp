@@ -14,11 +14,21 @@
     <jsp:body>
         <normaltext1>Hello ${sessionScope.email} </normaltext1>
         Velkommen til Johannes Fog carporte
-
         <pricetext>Dette er prisen</pricetext>
         <div>
+                ${requestScope.price}
+            <%--<c:if test="${sessionScope.role == 'employee' }">
+                <form action="${pageContext.request.contextPath}/fc/calculatepriceconfirmed" method="GET">
+            <c:forEach var="totalprice" items="${requestScope.itemList}">
+
+            ${itemList.material_id}_${itemList.lenght}_${itemList.quantity}_${ordre.price}_${itemList.order_id}
+                </c:forEach>
             ${requestScope.price}
+            </c:if>--%>
+
         </div>
+        <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"> Tilbage </a>
+
 
 
 

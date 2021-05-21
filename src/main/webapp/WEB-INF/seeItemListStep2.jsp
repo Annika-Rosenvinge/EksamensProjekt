@@ -4,20 +4,24 @@
 
 <t:genericpage>
     <jsp:attribute name="header">
-        Prisen for din ordre
-    </jsp:attribute>
-    <jsp:attribute name="footer">
-    </jsp:attribute>
-    <jsp:body>
 
+    </jsp:attribute>
+
+    <jsp:attribute name="footer">
+        <c: set var = "addHomeLink" value = "${false}" scope = "request"/>
+    </jsp:attribute>
+
+    <jsp:body>
         <h1>Fogscarporte </h1>
         <p>Dette er prisen for din ordre <p/>
         <br>
         <div>
-                ${requestScope.price}
-        </div>
-        <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/customerpage"> Tilbage </a>
+                ${requestScope.itemlist}
 
+            <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employee"> Tilbage </a>
+
+        </div>
 
     </jsp:body>
 </t:genericpage>
+

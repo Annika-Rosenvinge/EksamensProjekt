@@ -11,15 +11,16 @@
     <jsp:body>
 
         <h1>Velkommen. </h1>
-        <p>Her er alle ordre - ${sessionScope.email} <p/>
+        <p>Her er alle ordre - ${sessionScope.email} </p>
         <br>
-
-        <h2>Vælg Opgave <h2/>
         <c:if test="${sessionScope.role == 'employee' }">
-            <form action="${pageContext.request.contextPath}/fc/createitemlistfororder" method="POST">
+            <form action="${pageContext.request.contextPath}/fc/seeorderemployee" method="POST">
             <c:forEach var="ordre" items="${requestScope.orders}">
                 <p>${ordre.id}_${ordre.length}_${ordre.status}_${ordre.userId}
             </c:forEach>
+            <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"> Tilbage </a>
+
+
 
         </c:if>
     </jsp:body>

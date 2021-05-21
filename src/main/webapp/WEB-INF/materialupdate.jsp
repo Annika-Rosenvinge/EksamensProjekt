@@ -40,18 +40,10 @@
                     </div>
                     <input class="btn btn-primary" type="submit" value="Submit">
                 </form>
+                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"> Tilbage </a>
+
             </div>
 
-
-            <c:if test="${sessionScope.role == 'employee' }">
-                <normaltext1><a href="${pageContext.request.contextPath}/fc/employeepage">Tilbage til Medarbejderside</a></normaltext1>
-            </c:if>
-
-            <c:if test="${sessionScope.role == 'customer' }">
-                <normaltext1>Velkommen til kundesiden for Fog Carporte</normaltext1>
-                <a type="button" class="btn btn-light" href="${pageContext.request.contextPath}/fc/customerpage">Min
-                    Side</a>
-            </c:if>
 
         </div>
 

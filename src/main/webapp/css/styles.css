@@ -7,11 +7,44 @@
 {
     font-size: smaller;
 }
-/*
-    CSS styles for the whole website
-    The file is included in the genericpage.tag template
- */
+/* NYT CSS - Giv det nogle fornuftige navne*/
 
+.jumbotron-backgroundImage{
+    background: url("/images/baggrund.PNG") no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+}
+fogOverskrift1{
+    font-family: Dubai, serif;
+    font-size: 70px;
+    color: #003d76;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+fogOverskrift2{
+    font-family: Dubai, serif;
+    font-size: 55px;
+    color: #003d76;
+    margin-left: auto;
+    margin-right: auto;
+}
+fogText{
+    font-family: Dubai, serif;
+    font-size: 30px;
+    color: #003d76;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-dark{
+    color: #003d76;
+}
+
+
+
+
+/*Gammelt CSS - skal ikke bruges
+*/
 #topmenu_login_dialogue {
     font-size: smaller;
 }

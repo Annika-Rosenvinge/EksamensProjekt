@@ -29,6 +29,8 @@
                 </form>
 
                 <a class = "btn btn-dark" href="${sessionScope}/fc/createorder"> Lav ny forespørgsel </a>
+                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/customer"> Tilbage </a>
+
 
             </div>
 

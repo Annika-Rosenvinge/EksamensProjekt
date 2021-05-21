@@ -19,8 +19,11 @@
             <label for="orderID" class = "form-label">Order id</label>
             <input type="text" class = "form-control" id = "orderID"
                    placeholder = "7" name = "orderID" value ="${param.order_id}">
+
             <input class = "btn btn-primary" type = "submit" value="Submit">
         </div>
+        <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"> Tilbage </a>
+
 
     </jsp:body>
 </t:genericpage>

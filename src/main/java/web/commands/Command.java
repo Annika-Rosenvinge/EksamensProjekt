@@ -34,30 +34,27 @@ public abstract class Command
         commands.put("materialinsert",new CommandProtectedPage("materialinsert", "employee"));
         commands.put("materialconfirmed", new MaterialInsertCommand("materialinsertconfirmed", "employee"));
         //order/forespørgsel
-        commands.put("createorder", new CommandProtectedPage("createorder","employee"));
-        commands.put("createorderconfirmed", new CreateOrderCommand("createorderconfirmed", "employee"));
+        commands.put("createorder", new CommandProtectedPage("createorder","customer"));
+        commands.put("createorderconfirmed", new CreateOrderCommand("createorderconfirmed", "customer"));
         //opdater bruger informationer
         commands.put("customerinformation", new CommandProtectedPage("customerinformation", "customer"));
         commands.put("customerinformationconfirmed", new UserUpdateCommand("customerinformationconfirmed", "customer"));
         //see order customer and employee
         commands.put("seeordercustomer", new SeeOrderCustomerCommand("seeordercustomer", "customer"));
-        //!!Side mangler for employee!!
-
         commands.put("seeorderemployee", new SeeOrderEmployeeCommand("seeorderemployee", "employee"));
         //update status on order + confirmed
         commands.put("updatestatusonorder", new CommandProtectedPage("updatestatusonorder","employee"));
         commands.put("updatestatusonorderconfirmed", new UpdateStatusCommand("updatestatusonorderconfirmed", "employee"));
-        //Item list - SKAL LAVES OM
+        //Item list
         commands.put("addtoitemlist", new CommandProtectedPage("addtoitemlist", "employee"));
+        commands.put("addtoitemlistconfirmed", new AddToItemlistCommand("createitemlistconfirmed", "employee"));
         commands.put("createitemlist", new CommandProtectedPage("createitemlist", "employee"));
         commands.put("createitemlistconfirmed", new CreateItemListCommand("createitemlistconfirmed", "employee"));
-        commands.put("addtoitemlistconfirmed", new AddToItemlistCommand("createitemlistconfirmed", "employee"));
         //pris beregner for medarbejder
         commands.put("calculatetotalprice", new CommandProtectedPage("calculatetotalprice", "employee"));
         commands.put("calculatepriceconfirmed", new CalculatePriceCommand("calulatepriceconfirmed", "employee"));
         //prisberegner for kunde
         commands.put("calculatepricecustomer", new CustomerPriceCommand("calculatepricecustomer", "customer"));
-        commands.put("createitemlistfororder", new CreateItemListFC("showitemlistforcustomer", "employee"));
     }
 //createitemlistfororder
     public static Command fromPath(

@@ -1,7 +1,6 @@
 package business.services;
 
 import business.entities.ItemList;
-import business.entities.Order;
 import business.exceptions.UserException;
 import business.persistence.Database;
 import business.persistence.ItemlistMapper;
@@ -27,5 +26,10 @@ public class ItemlistFacade {
 
     public void customerPrice(int order_id) throws UserException {
         itemMapper.calculatePrice(order_id);
+    }
+
+    public int seeItemList(int order_id) throws UserException {
+        itemMapper.seeItemList(order_id);
+        return order_id;
     }
 }

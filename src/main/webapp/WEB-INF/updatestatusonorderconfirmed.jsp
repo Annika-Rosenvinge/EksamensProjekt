@@ -27,6 +27,8 @@
                 <form name="deposit" action="${pageContext.request.contextPath}/fc/updatestatusonorderconfirmed" method="POST">
                     <normaltext1>Statusen er nu opdateret</normaltext1>
                 </form>
+                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"> Tilbage </a>
+
             </div>
 
 

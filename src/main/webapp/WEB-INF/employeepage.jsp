@@ -10,16 +10,27 @@
     </jsp:attribute>
     <jsp:body>
 
-        <h1>Velkommen. </h1>
-        <p>Du er logget ind som MEDARBEJDER, med user - ${sessionScope.email} <p/>
+        <fogOverskrift1>Velkommen. </fogOverskrift1>
+        <fogtext>Du er logget ind som MEDARBEJDER, med user - ${sessionScope.email} </fogtext>
         <br>
 
-        <h2>Vælg Opgave <h2/>
+        <fogoverskrift2>Vælg Opgave </fogoverskrift2>>
         <c:if test="${sessionScope.role == 'employee' }">
-        <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/materialinsert"> Indsæt Materiale </a>
-        <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/materialupdate"> Opdater Materiale Pris </a>
-        <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/updatestatusonorder"> Updater Ordrestatus </a>
-            <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/seeorderemployee"> Se alle ordre </a>
+            <div class = "jumbotron-backgroundImage">
+                <div>
+                    <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/materialinsert"> Indsæt Materiale </a>
+                    <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/materialupdate"> Opdater Materiale Pris </a>
+                    <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/updatestatusonorder"> Updater Ordrestatus </a>
+
+                </div>
+                <div>
+                    <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/seeorderemployee"> Se alle ordre </a>
+                    <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/createitemlist"> Lav en stykliste </a>
+                    <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/addtoitemlist"> Tilføj materiale til stykliste</a>
+                    <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/seeitemlist"> Se styklisten for en ordre </a>
+                </div>
+            </div>
+
         </c:if>
     </jsp:body>
 </t:genericpage>

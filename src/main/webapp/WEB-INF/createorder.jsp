@@ -74,10 +74,12 @@
 
                     <input class="btn btn-primary" type="submit" value="Submit">
                 </form>
+                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/customerpage"> Tilbage </a>
+
             </div>
 
 
-            <c:if test="${sessionScope.role == 'employee' }">
+           <%-- <c:if test="${sessionScope.role == 'employee' }">
                 <normaltext1>Du er nu logget ind som medarbejder</normaltext1>
                 <normaltext1><a href="fc/employeepage">Employee Page</a></normaltext1>
             </c:if>
@@ -86,7 +88,7 @@
                 <normaltext1>Velkommen til kundesiden for Fog Carporte</normaltext1>
                 <a type="button" class="btn btn-light" href="${pageContext.request.contextPath}/fc/customerpage">Min
                     Side</a>
-            </c:if>
+            </c:if>--%>
 
         </div>
 
