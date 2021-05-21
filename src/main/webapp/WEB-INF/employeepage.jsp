@@ -19,6 +19,7 @@
         <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/materialinsert"> Indsæt Materiale </a>
         <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/materialupdate"> Opdater Materiale Pris </a>
         <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/updatestatusonorder"> Updater Ordrestatus </a>
+            <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/seeorderemployee"> Se alle ordre </a>
         </c:if>
     </jsp:body>
 </t:genericpage>

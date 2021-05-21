@@ -16,7 +16,8 @@ public class MaterialMapper {
     indsætte prisen på et nyt materiale.
     Det bliver nu sendt over i hver sin commandKlasse
      */
-
+    //97x97	mm.	trykimp.	Stolpe 300 11 stk Stolper	nedgraves	90	cm.	i	jord
+    //Insert into material values (name, part_pr_unit, unit) values ("Stolpe_97x97	mm.	trykimp.",  1, "stk")
     public void insertMaterial (Material material) throws UserException {
         try (Connection connection = database.connect()){
 

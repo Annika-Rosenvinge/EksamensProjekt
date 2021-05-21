@@ -66,33 +66,27 @@ public class OrderMapper {
     public List<Order> seeOrderEmployee() throws UserException {
         List<Order> AllOrders = new ArrayList<>();
         // TO DO Loop igennem Restultatet fra databasen
-        return AllOrders;
-    }
-
-    /*
-    * Order order = new Order(780, 600, 1,"done");
-        Order order2 = new Order(600, 600, 2,"done");
-        order.setId(10);
-        order2.setId(11);
-        AllOrders.add(order);
-        AllOrders.add(order2);
-
-        return AllOrders;
-    * */
-
-
-
-    /*public void seeOrderEmployee() throws UserException{
         try(Connection connection = database.connect()){
-            String sql = "SELECT * FROM order";
+            String sql = "SELECT * FROM `order`";
             try (PreparedStatement preparedStatement = connection.prepareStatement(sql)){
-                preparedStatement.executeUpdate();
+                ResultSet rs = preparedStatement.executeQuery();
+                while(rs.next()){
+                    int id = rs.getInt("order_id");
+                    int length = rs.getInt("lenght");
+                    int width = rs.getInt("width");
+                    int userid = rs.getInt("user_id");
+                    String status = rs.getString("status");
+                    Order order = new Order(length,width,userid,status);
+                    order.setId(id);
+                    AllOrders.add(order);
+                }
             }
         }
         catch (SQLException sqlException){
             throw new UserException(sqlException.getMessage());
         }
-    }*/
+        return AllOrders;
+    }
 
 
 }

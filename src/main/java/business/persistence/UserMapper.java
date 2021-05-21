@@ -48,7 +48,7 @@ public class UserMapper
     {
         try (Connection connection = database.connect())
         {
-            String sql = "SELECT id, role, name FROM users WHERE email=? AND password=?";
+            String sql = "SELECT user_id, role, name FROM users WHERE email=? AND password=?";
 
             try (PreparedStatement ps = connection.prepareStatement(sql))
             {
@@ -59,7 +59,7 @@ public class UserMapper
                 {
                     String role = rs.getString("role");
                     String name = rs.getString("name");
-                    int id = rs.getInt("id");
+                    int id = rs.getInt("user_id");
                     User user = new User(email, password, role, name);
                     user.setId(id);
                     return user;
