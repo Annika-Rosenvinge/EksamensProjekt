@@ -13,13 +13,13 @@
 
     <jsp:body>
         <div>
-            <div class = "jumbotron-fluid text-center">
-                <underoverskrift1>Fog carporte</underoverskrift1>
+            <fogOverskrift1>Se styklisten for en ordre</fogOverskrift1>
+            <div class = "jumbotron jumbotron-fluid text-center">
                 <br>
-                <form name="deposit" action="${pageContext.request.contextPath}/fc/seeorder" method="POST">
+                <form name="deposit" action="${pageContext.request.contextPath}/fc/seeitemlist" method="POST">
                     <div class="row mb-3">
-                        <normaltext1>Indtast ordre id'et for at se styklisten</normaltext1>
-                        <label for="order_id" class="form-label"> Indtast ordre nummeret</label>
+                        <fogtext>Indtast ordre id'et for at se styklisten</fogtext>
+                        <label for="order_id" class="form-label"><foglabeltext>Indtast ordre nummeret</foglabeltext></label>
                         <div class = "col-12">
                             <input type="text" class="form-control" id="order_id"
                                    placeholder="7" name="order_id" value="${param.order_id}">
@@ -27,8 +27,7 @@
                     </div>
                     <input class="btn btn-primary" type="submit" value="Submit">
                 </form>
-                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"> Tilbage </a>
-
+                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"><btn-text> Tilbage</btn-text> </a>
             </div>
         </div>
 

@@ -22,59 +22,53 @@
 
     <jsp:body>
         <div>
-            <div class = "jumbotron-fluid text-center">
-                <underoverskrift1> Fog Carporte - Bestil din special bygget carport </underoverskrift1>
+            <fogOverskrift1> Fog Carporte - Bestil din special bygget carport </fogOverskrift1>
+            <fogOverskrift2>Vælg en længde og bredde, så klare vi resten</fogOverskrift2>
+            <div class = "jumbotron jumbotron-fluid text-center">
                 <br>
                 <form name="deposit" action="${pageContext.request.contextPath}/fc/createorder" method="POST">
                     <div class="row mb-3">
-
-                        <%--<label for="width" class="form-label">Bredden på din nye carport</label>
-                        <div class = "col-12">
-                            <input type="text" class="form-control" id="width"
-                                   placeholder="25X200mm tryk.imp bræt" name="name" value="${param.name}">
-                        </div>--%>
-
                         <input type="radio" class="btn-check" name="width" id="width1" autocomplete="off" value="${param.width}">
-                        <label class="btn btn-secondary" for=width1 >300</label>
+                        <label class="btn btn-secondary" for=width1><foglabeltext>300</foglabeltext></label>
 
                         <input type="radio" class="btn-check" name="width" id="width2" autocomplete="off" value="${param.width}">
-                        <label class="btn btn-secondary" for=width2>450</label>
+                        <label class="btn btn-secondary" for=width2><foglabeltext>450</foglabeltext></label>
 
                         <input type="radio" class="btn-check" name="width" id="width3" autocomplete="off"value="${param.width}">
-                        <label class="btn btn-secondary" for=width3>600</label>
+                        <label class="btn btn-secondary" for=width3><foglabeltext>600</foglabeltext></label>
 
                         <input type="radio" class="btn-check" name="width" id="width4" autocomplete="off"value="${param.width}">
-                        <label class="btn btn-secondary" for=width4>750</label>
+                        <label class="btn btn-secondary" for=width4><foglabeltext>750</foglabeltext></label>
                     </div>
 
                     <div class="row mb-3">
 
                         <input type="radio" class="btn-check" name="lenght" id="lenght1" autocomplete="off" value="${param.length}">
-                        <label class="btn btn-secondary" for=lenght1 >480</label>
+                        <label class="btn btn-secondary" for=lenght1 ><foglabeltext>480</foglabeltext></label>
 
                         <input type="radio" class="btn-check" name="length" id="lenght2" autocomplete="off" value="${param.length}">
-                        <label class="btn btn-secondary" for=lenght2>530</label>
+                        <label class="btn btn-secondary" for=lenght2><foglabeltext>530</foglabeltext></label>
 
                         <input type="radio" class="btn-check" name="length" id="lenght3" autocomplete="off"value="${param.length}">
-                        <label class="btn btn-secondary" for=lenght3>580</label>
+                        <label class="btn btn-secondary" for=lenght3><foglabeltext>580</foglabeltext></label>
 
                         <input type="radio" class="btn-check" name="length" id="lenght4" autocomplete="off"value="${param.length}">
-                        <label class="btn btn-secondary" for=lenght4>630</label>
+                        <label class="btn btn-secondary" for=lenght4><foglabeltext>630</foglabeltext></label>
 
                         <input type="radio" class="btn-check" name="length" id="lenght5" autocomplete="off"value="${param.length}">
-                        <label class="btn btn-secondary" for=lenght5>680</label>
+                        <label class="btn btn-secondary" for=lenght5><foglabeltext>680</foglabeltext></label>
 
                         <input type="radio" class="btn-check" name="length" id="lenght6" autocomplete="off"value="${param.length}">
-                        <label class="btn btn-secondary" for=lenght6>730</label>
+                        <label class="btn btn-secondary" for=lenght6><foglabeltext>730</foglabeltext></label>
 
                         <input type="radio" class="btn-check" name="length" id="lenght7" autocomplete="off"value="${param.length}">
-                        <label class="btn btn-secondary" for=lenght7>780</label>
+                        <label class="btn btn-secondary" for=lenght7><foglabeltext>780</foglabeltext></label>
                     </div>
 
 
                     <input class="btn btn-primary" type="submit" value="Submit">
                 </form>
-                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/customerpage"> Tilbage </a>
+                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/customerpage"> <btn-text>Tilbage</btn-text> </a>
 
             </div>
 

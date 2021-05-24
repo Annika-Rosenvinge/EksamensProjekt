@@ -10,15 +10,15 @@
     </jsp:attribute>
     <jsp:body>
 
-        <h1>Velkommen. </h1>
-        <p>Her er alle ordre - ${sessionScope.email} </p>
+        <fogOverskrift1>Velkommen. </fogOverskrift1>
+        <fogOverskrift2>Her er alle ordre - ${sessionScope.email} </fogOverskrift2>
         <br>
         <c:if test="${sessionScope.role == 'employee' }">
             <form action="${pageContext.request.contextPath}/fc/seeorderemployee" method="POST">
             <c:forEach var="ordre" items="${requestScope.orders}">
-                <p>${ordre.id}_${ordre.length}_${ordre.status}_${ordre.userId}
+                <fogtext>${ordre.id}_${ordre.length}_${ordre.status}_${ordre.userId}</fogtext>
             </c:forEach>
-            <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"> Tilbage </a>
+            <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"><btn-text> Tilbage </btn-text></a>
 
 
 

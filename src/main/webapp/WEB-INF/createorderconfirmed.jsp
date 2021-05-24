@@ -21,31 +21,18 @@
 
     <jsp:body>
         <div>
-            <div class = "jumbotron-fluid text-center">
-                <underoverskrift1> Fog Carporte </underoverskrift1>
+            <fogOverskrift1> Fog Carporte </fogOverskrift1>
+            <div class = "jumbotron jumbotron-fluid text-center">
                 <br>
                 <form name="deposit" action="${pageContext.request.contextPath}/fc/materialupdateconfirmed" method="POST">
-                    <normaltext1>Din forespørgelse er registreret</normaltext1>
+                    <fogOverskrift2>Din forespørgelse er registreret</fogOverskrift2>
                 </form>
 
-                <a class = "btn btn-dark" href="${sessionScope}/fc/createorder"> Lav ny forespørgsel </a>
-                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/customer"> Tilbage </a>
+                <a class = "btn btn-dark" href="${sessionScope}/fc/createorder"><btn-text> Lav ny forespørgsel </btn-text> </a>
+                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/customer"> <btn-text> Tilbage</btn-text> </a>
 
 
             </div>
-
-
-            <c:if test="${sessionScope.role == 'employee' }">
-                <normaltext1>Du er nu logget ind som medarbejder</normaltext1>
-                <normaltext1><a href="fc/employeepage">Employee Page</a></normaltext1>
-            </c:if>
-
-            <c:if test="${sessionScope.role == 'customer' }">
-                <normaltext1>Velkommen til kundesiden for Fog Carporte</normaltext1>
-                <a type="button" class="btn btn-light" href="${pageContext.request.contextPath}/fc/customerpage">Min
-                    Side</a>
-            </c:if>
-
         </div>
 
     </jsp:body>

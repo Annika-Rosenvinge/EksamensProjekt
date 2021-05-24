@@ -10,32 +10,32 @@
     </jsp:attribute>
     <jsp:body>
         <div>
-            <div class = "jumbotron-fluid text-center">
-                <underoverskrift1> Fog Carporte - Stykliste kreation </underoverskrift1>
-                <normaltext1>Husk kundens ordre nummer og hvor stor de ønsker deres carport</normaltext1>
+            <fogOverskrift1> Fog Carporte - Stykliste kreation </fogOverskrift1>
+            <div class = "jumbotron jumbotron-fluid text-center">
+                <fogOverskrift2>Husk kundens ordre nummer og hvor stor de ønsker deres carport</fogOverskrift2>
                 <br>
                 <form name="deposit" action="${pageContext.request.contextPath}/fc/addtoitemlist" method="POST">
-                    <pricetext>Indtast de materialer der skal bruges</pricetext>
+                    <foglabeltext>Indtast de materialer der skal bruges</foglabeltext>
 
-                    <label for="materialID" class = "form-label">Materiale id</label>
+                    <label for="materialID" class = "form-label"><foglabeltext>Materiale id</foglabeltext></label>
                     <input type="text" class = "form-control" id = "materialID"
                            placeholder = "7" name = "materialID" value ="${param.material_id}">
 
-                    <label for="quantity" class = "form-label">Antal</label>
+                    <label for="quantity" class = "form-label"><foglabeltext>Antal</foglabeltext></label>
                     <input type="text" class = "form-control" id = "quantity"
                            placeholder = "12" name = "quantity" value ="${param.quantity}">
 
-                    <label for="length" class = "form-label">Længden på materialet</label>
+                    <label for="length" class = "form-label"><foglabeltext>Længden på materialet</foglabeltext></label>
                     <input type="text" class = "form-control" id = "length"
                            placeholder = "300" name = "lenght" value ="${param.length}">
 
-                    <label for="description" class = "form-label">Kundens ordrenummer</label>
+                    <label for="description" class = "form-label"><foglabeltext>Kundens ordrenummer</foglabeltext></label>
                     <input type="text" class = "form-control" id = "description"
                            placeholder = "4" name = "description" value ="${param.order_id}">
 
                     <input class = "btn btn-primary" type = "submit" value="Submit">
                 </form>
-                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"> Tilbage </a>
+                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"> <btn-text> Tilbage</btn-text> </a>
 
 
             </div>

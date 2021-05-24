@@ -11,16 +11,16 @@
     </jsp:attribute>
 
     <jsp:body>
-        <div style="margin-top: 5em;" class="container">
+        <div style="margin-top: 5em;" class="jumbotron-fluid">
             <form name="login" action="${pageContext.request.contextPath}/fc/logincommand"  method="POST">
                 <div class="row mb-3">
-                    <label for="email" class="col-sm-1 col-form-label" >Email</label>
+                    <label for="email" class="col-sm-1 col-form-label"><foglabeltext>Email</foglabeltext></label>
                     <div class="col-sm-4">
                         <input class="form-control" type="text" id ="email" name="email" placeholder="someone@nowhere.com">
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label class="col-sm-1 col-form-label" for="password">Password</label>
+                    <label class="col-sm-1 col-form-label" for="password"><foglabeltext>Password</foglabeltext></label>
                     <div class="col-sm-4">
                         <label>
                             <input class="form-control" type="password" id ="password" name="password" placeholder="sesam">
@@ -36,7 +36,7 @@
                 <c:if test="${not empty param.msg}">
                     <p style="font-size: large">${param.msg}</p>
                 </c:if>
-                <button class="btn btn-primary" type="submit" value="Login">Sign in</button>
+                <button class="btn btn-primary" type="submit" value="Login"><foglabeltext>Sign in</foglabeltext></button>
             </form>
 
 

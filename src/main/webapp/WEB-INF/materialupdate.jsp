@@ -21,18 +21,18 @@
 
     <jsp:body>
         <div>
+            <fogOverskrift1> Fog Carporte </fogOverskrift1>
             <div class = "jumbotron-fluid text-center">
-                <underoverskrift1> Fog Carporte </underoverskrift1>
                 <br>
                 <form name="deposit" action="${pageContext.request.contextPath}/fc/materialupdate" method="POST">
                     <div class="row mb-3">
-                        <label for="materialname" class="form-label"> Materialets navn</label>
+                        <label for="materialname" class="form-label"><foglabeltext>Materialets navn</foglabeltext></label>
                         <div class = "col-12">
                             <input type="text" class="form-control" id="materialname"
                                    placeholder="ex; 25X200mm tryk.imp bræt" name="name" value="${param.name}">
                         </div>
 
-                        <label for="price" class="form-label">Den nye pris på materialet</label>
+                        <label for="price" class="form-label"><foglabeltext>Den nye pris på materialet</foglabeltext></label>
                         <div class ="col-12">
                             <input type="text" class="form-control" id="price"
                                    placeholder="20" name="price" value="${param.price}">
@@ -40,7 +40,7 @@
                     </div>
                     <input class="btn btn-primary" type="submit" value="Submit">
                 </form>
-                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"> Tilbage </a>
+                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"><btn-text>Tilbage</btn-text></a>
 
             </div>
 

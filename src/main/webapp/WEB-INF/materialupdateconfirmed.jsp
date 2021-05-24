@@ -15,13 +15,13 @@
 
     <jsp:body>
         <div>
+            <fogOverskrift1> Fog Carporte </fogOverskrift1>
             <div class = "jumbotron-fluid text-center">
-                <underoverskrift1> Fog Carporte </underoverskrift1>
                 <br>
                 <form name="deposit" action="${pageContext.request.contextPath}/fc/materialupdateconfirmed" method="POST">
-                    <normaltext1>Prisen er nu opdateret</normaltext1>
+                    <fogOverskrift2>Prisen er nu opdateret</fogOverskrift2>
                 </form>
-                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"> Tilbage </a>
+                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"><btn-text>Tilbage</btn-text> </a>
 
             </div>
         </div>

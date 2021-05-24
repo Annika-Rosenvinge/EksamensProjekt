@@ -14,6 +14,7 @@
     background-size: cover;
     padding: 20px;
 }
+
 fogOverskrift1{
     font-family: Dubai, serif;
     font-size: 70px;
@@ -36,10 +37,31 @@ fogText{
     margin-left: auto;
     margin-right: auto;
 }
+foglabeltext{
+    font-family: Dubai, serif;
+    font-size: 25px;
+    color: #003d76;
+    margin-left: auto;
+    margin-right: auto;
+}
 .btn-dark{
     color: #003d76;
 }
+btn-text{
+    font-family: Dubai, serif;
+    font-size: 25px;
+    color: #000000;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-primary{
+    color: #455f79;
+}
 
+
+.jumbotron{
+    background-color: #455f79;
+}
 
 
 
@@ -47,13 +69,6 @@ fogText{
 */
 #topmenu_login_dialogue {
     font-size: smaller;
-}
-
-.jumbotron {
-    padding: 4rem 2rem;
-    margin-bottom: 2rem;
-    background-color: lightgrey;
-    border-radius: .3rem;
 }
 
 overskrift1 {

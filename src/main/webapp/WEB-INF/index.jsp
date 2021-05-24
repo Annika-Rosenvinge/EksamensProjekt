@@ -15,10 +15,11 @@
     <jsp:body>
 
         <div>
-            <h2>FOG CARPORT PROJEKT</h2>
+            <fogoverskrift1>FOG CARPORT</fogoverskrift1>
 
-            <div style="margin-top: 3em;margin-bottom: 3em;">
-                Eksamens projekt
+            <div class ="jumbotron-backgroundImage">
+                <fogOverskrift2> Velkommen til Fog Carporte </fogOverskrift2>
+                <fogtext>Her kan du bestille en carport, lige efter dine behov</fogtext>
             </div>
 
             <%--<c:if test="${sessionScope.role == 'employee' }">

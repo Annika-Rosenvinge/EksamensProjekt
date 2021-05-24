@@ -21,14 +21,13 @@
 
     <jsp:body>
         <div>
-            <div class = "jumbotron-fluid text-center">
-                <underoverskrift1> Fog Carporte </underoverskrift1>
+            <fogOverskrift1> Fog Carporte </fogOverskrift1>
+            <div class = "jumbotron jumbotron-fluid text-center">
                 <br>
                 <form name="deposit" action="${pageContext.request.contextPath}/fc/updatestatusonorderconfirmed" method="POST">
-                    <normaltext1>Statusen er nu opdateret</normaltext1>
+                    <fogtext>Statusen er nu opdateret</fogtext>
                 </form>
-                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"> Tilbage </a>
-
+                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"><btn-text>Tilbage</btn-text></a>
             </div>
 
 

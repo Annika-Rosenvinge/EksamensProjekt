@@ -42,6 +42,8 @@ public abstract class Command
         //see order customer and employee
         commands.put("seeordercustomer", new SeeOrderCustomerCommand("seeordercustomer", "customer"));
         commands.put("seeorderemployee", new SeeOrderEmployeeCommand("seeorderemployee", "employee"));
+        //confirmed for customer mangler
+
         //update status on order + confirmed
         commands.put("updatestatusonorder", new CommandProtectedPage("updatestatusonorder","employee"));
         commands.put("updatestatusonorderconfirmed", new UpdateStatusCommand("updatestatusonorderconfirmed", "employee"));
@@ -50,6 +52,8 @@ public abstract class Command
         commands.put("addtoitemlistconfirmed", new AddToItemlistCommand("createitemlistconfirmed", "employee"));
         commands.put("createitemlist", new CommandProtectedPage("createitemlist", "employee"));
         commands.put("createitemlistconfirmed", new CreateItemListCommand("createitemlistconfirmed", "employee"));
+        commands.put("seeitemlist", new CommandProtectedPage("seeitemlist", "employee"));
+        commands.put("seeitemListStep2", new SeeItemListCommand("seeitemListStep2", "employee"));
         //pris beregner for medarbejder
         commands.put("calculatetotalprice", new CommandProtectedPage("calculatetotalprice", "employee"));
         commands.put("calculatepriceconfirmed", new CalculatePriceCommand("calulatepriceconfirmed", "employee"));

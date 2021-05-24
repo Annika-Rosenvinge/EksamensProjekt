@@ -10,20 +10,20 @@
     </jsp:attribute>
     <jsp:body>
         <div>
-            <div class = "jumbotron-fluid text-center">
-                <underoverskrift1> Fog Carporte - Stykliste kreation </underoverskrift1>
-                <normaltext1>Husk kundens ordre nummer og hvor stor de ønsker deres carport</normaltext1>
+            <fogOverskrift1> Fog Carporte - Stykliste kreation </fogOverskrift1>
+            <div class = "jumbotron jumbotron-fluid text-center">
+                <fogOverskrift2>Husk kundens ordre nummer og hvor stor de ønsker deres carport</fogOverskrift2>
                 <br>
                 <form name="deposit" action="${pageContext.request.contextPath}/fc/createitemlist" method="POST">
-                    <pricetext>Indtast kundens ordre id</pricetext>
+                    <fogText>Indtast kundens ordre id</fogText>
 
-                    <label for="materialID" class = "form-label">Kundens ordre id</label>
+                    <label for="materialID" class = "form-label"><foglabeltext>Kundens ordre id</foglabeltext></label>
                     <input type="text" class = "form-control" id = "materialID"
                            placeholder = "7" name = "materialID" value ="${param.order_id}">
 
                     <input class = "btn btn-primary" type = "submit" value="Submit">
                 </form>
-                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"> Tilbage </a>
+                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"><btn-text> Tilbage </btn-text></a>
 
 
             </div>

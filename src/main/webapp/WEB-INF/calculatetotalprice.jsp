@@ -10,19 +10,19 @@
     </jsp:attribute>
     <jsp:body>
 
-        <h1>Fogscarporte </h1>
-        <p>Beregn prisen for en kundes ordre <p/>
+        <fogOverskrift1>Fogscarporte </fogOverskrift1>
+        <fogOverskrift2>Beregn prisen for en kundes ordre </fogOverskrift2>
         <br>
         <div>
-            <normaltext1>Indtast kundens ordre id for at få prisen,
-                husk at der skal være lavet en materiale liste før prisen kan beregnes</normaltext1>
-            <label for="orderID" class = "form-label">Order id</label>
+            <fogtext>Indtast kundens ordre id for at få prisen,
+                husk at der skal være lavet en materiale liste før prisen kan beregnes</fogtext>
+            <label for="orderID" class = "form-label"><foglabeltext>Order id</foglabeltext></label>
             <input type="text" class = "form-control" id = "orderID"
                    placeholder = "7" name = "orderID" value ="${param.order_id}">
 
             <input class = "btn btn-primary" type = "submit" value="Submit">
         </div>
-        <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"> Tilbage </a>
+        <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"> <btn-text>Tilbage</btn-text> </a>
 
 
     </jsp:body>

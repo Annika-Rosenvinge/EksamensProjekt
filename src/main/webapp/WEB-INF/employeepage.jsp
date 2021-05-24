@@ -9,25 +9,23 @@
     <jsp:attribute name="footer">
     </jsp:attribute>
     <jsp:body>
-
         <fogOverskrift1>Velkommen. </fogOverskrift1>
-        <fogtext>Du er logget ind som MEDARBEJDER, med user - ${sessionScope.email} </fogtext>
+        <fogtext>Du er logget ind som MEDARBEJDER - ${sessionScope.email} </fogtext>
         <br>
 
-        <fogoverskrift2>Vælg Opgave </fogoverskrift2>>
+        <fogOverskrift2>Vælg Opgave </fogOverskrift2>>
         <c:if test="${sessionScope.role == 'employee' }">
             <div class = "jumbotron-backgroundImage">
                 <div>
-                    <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/materialinsert"> Indsæt Materiale </a>
-                    <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/materialupdate"> Opdater Materiale Pris </a>
-                    <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/updatestatusonorder"> Updater Ordrestatus </a>
-
+                    <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/materialinsert"> <btn-text>Indsæt Materiale </btn-text></a>
+                    <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/materialupdate"> <btn-text>Opdater Materiale Pris</btn-text> </a>
+                    <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/updatestatusonorder"> <btn-text>Updater Ordrestatus</btn-text> </a>
                 </div>
                 <div>
-                    <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/seeorderemployee"> Se alle ordre </a>
-                    <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/createitemlist"> Lav en stykliste </a>
-                    <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/addtoitemlist"> Tilføj materiale til stykliste</a>
-                    <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/seeitemlist"> Se styklisten for en ordre </a>
+                    <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/seeorderemployee"> <btn-text>Se alle ordre</btn-text> </a>
+                    <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/createitemlist"> <btn-text> Lav en stykliste </btn-text></a>
+                    <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/addtoitemlist"> <btn-text> Tilføj materiale til stykliste</btn-text></a>
+                    <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/seeitemlist"> <btn-text>Se styklisten for en ordre </btn-text></a>
                 </div>
             </div>
 

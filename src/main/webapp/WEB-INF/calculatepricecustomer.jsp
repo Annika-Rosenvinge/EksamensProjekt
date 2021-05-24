@@ -10,13 +10,13 @@
     </jsp:attribute>
     <jsp:body>
 
-        <h1>Fogscarporte </h1>
-        <p>Dette er prisen for din ordre <p/>
+        <fogOverskrift1>Fogscarporte </fogOverskrift1>
+        <fogOverskrift2>Dette er prisen for din ordre </fogOverskrift2>
         <br>
         <div>
-                ${requestScope.price}
+                <fogtext>${requestScope.price}</fogtext>
         </div>
-        <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/customerpage"> Tilbage </a>
+        <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/customerpage"><btn-text>Tilbage</btn-text></a>
 
 
     </jsp:body>

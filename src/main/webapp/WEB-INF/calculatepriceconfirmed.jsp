@@ -12,11 +12,11 @@
     </jsp:attribute>
 
     <jsp:body>
-        <normaltext1>Hello ${sessionScope.email} </normaltext1>
+        <fogOverskrift1>Hello ${sessionScope.email} </fogOverskrift1>
         Velkommen til Johannes Fog carporte
-        <pricetext>Dette er prisen</pricetext>
+        <fogOverskrift2>Dette er prisen</fogOverskrift2>
         <div>
-                ${requestScope.price}
+            <fogtext>${requestScope.price}</fogtext>
             <%--<c:if test="${sessionScope.role == 'employee' }">
                 <form action="${pageContext.request.contextPath}/fc/calculatepriceconfirmed" method="GET">
             <c:forEach var="totalprice" items="${requestScope.itemList}">
@@ -27,11 +27,6 @@
             </c:if>--%>
 
         </div>
-        <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"> Tilbage </a>
-
-
-
-
-
+        <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"><btn-text> Tilbage</btn-text></a>
     </jsp:body>
 </t:genericpage>

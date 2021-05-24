@@ -24,30 +24,30 @@ Kun 1 contentType er tilladt
 
     <jsp:body>
         <div>
-            <div class = "jumbotron-fluid text-center">
-                <underoverskrift1> Fog Carporte </underoverskrift1>
+            <fogOverskrift1> Fog Carporte </fogOverskrift1>
+            <div class = "jumbotron jumbotron-fluid text-center">
                 <br>
                 <form name="deposit" action="${pageContext.request.contextPath}/fc/materialinsert" method="POST">
                     <div class="row mb-3">
-                        <label for="materialname" class="form-label"> Materialets navn</label>
+                        <label for="materialname" class="form-label"> <foglabeltext>Materialets navn</foglabeltext></label>
                         <div class = "col-12">
                             <input type="text" class="form-control" id="materialname"
                                    placeholder="25X200mm tryk.imp bræt" name="name" value="${param.name}">
                         </div>
 
-                        <label for="partsprunit" class="form-label">Hvor mange er der i pakken?</label>
+                        <label for="partsprunit" class="form-label"><foglabeltext>Hvor mange er der i pakken?</foglabeltext></label>
                         <div class ="col-12">
                             <input type="text" class="form-control" id="partsprunit"
                                    placeholder="2" name="price" value="${param.partsPrUnit}">
                         </div>
 
-                        <label for="unit" class="form-label">Er det stk/boks/rulle?</label>
+                        <label for="unit" class="form-label"><foglabeltext>Er det stk/boks/rulle?</foglabeltext></label>
                         <div class ="col-12">
                             <input type="text" class="form-control" id="unit"
                                    placeholder="stk" name="price" value="${param.unit}">
                         </div>
 
-                        <label for="price" class="form-label">Prisen på materialet</label>
+                        <label for="price" class="form-label"><foglabeltext>Prisen på materialet</foglabeltext></label>
                         <div class ="col-12">
                             <input type="text" class="form-control" id="price"
                                    placeholder="20" name="price" value="${param.price}">
@@ -55,7 +55,7 @@ Kun 1 contentType er tilladt
                     </div>
                     <input class="btn btn-primary" type="submit" value="Submit">
                 </form>
-                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"> Tilbage </a>
+                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"><btn-text>Tilbage</btn-text></a>
 
             </div>
 

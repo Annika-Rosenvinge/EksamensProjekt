@@ -10,18 +10,24 @@
     </jsp:attribute>
 
     <jsp:body>
-        <normaltext1>Hello ${sessionScope.email} </normaltext1>
-        Velkommen til Fog carporte
+        <fogOverskrift1>Hello ${sessionScope.email} </fogOverskrift1>
+        <fogOverskrift2>Velkommen til Fog carporte</fogOverskrift2>
 
-        <pricetext>Husk at du skal indtaste din adresse og andet kontakt information inden du
-            bestiller første gang, ellers så bliver din ordre anulleret </pricetext>
+        <div class = "jumbotron-backgroundImage">
+            <fogtext>Husk at du skal indtaste din adresse og andet kontakt information inden du
+                bestiller første gang, ellers så bliver din ordre anulleret </fogtext>
+            <div>
+                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/customerinformation"><btn-text> Opdater information</btn-text> </a>
+                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/seeordercustomer"> <btn-text> Se dine ordre</btn-text> </a>
+                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/createorder"><btn-text> Ny ordre </btn-text> </a>
+                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/calculatepricecustomer"><btn-text>Se prisen for din ordre</btn-text></a>
+            </div>
 
-
-        <div>
-            <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/customerinformation"> Opdater information </a>
-            <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/seeordercustomer"> Se dine ordre </a>
-            <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/createorder"> Ny ordre </a>
         </div>
+
+
+
+
 
     </jsp:body>
 

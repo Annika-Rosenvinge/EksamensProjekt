@@ -10,13 +10,13 @@
     </jsp:attribute>
 
     <jsp:body>
-        <normaltext1>Hello ${sessionScope.email} </normaltext1>
-        Velkommen til Johannes Fog carporte
-
-        <pricetext>Dine informationer er opdateret</pricetext>
+        <fogOverskrift1>Hello ${sessionScope.email}</fogOverskrift1>
+        <fogOverskrift2>Velkommen til Johannes Fog carporte</fogOverskrift2>
         <div>
-            <a class = "btn btn-dark" href="${sessionScope}/fc/customerpage"> Gå til kundeside </a>
-
+            <fogtext>Dine informationer er opdateret</fogtext>
+            <div>
+                <a class = "btn btn-dark" href="${sessionScope}/fc/customerpage"><btn-text>Gå til kundeside</btn-text> </a>
+            </div>
         </div>
 
 

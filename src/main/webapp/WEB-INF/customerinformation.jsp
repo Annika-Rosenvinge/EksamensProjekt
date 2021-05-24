@@ -17,25 +17,25 @@
     </jsp:attribute>
 
     <jsp:body>
-        <normaltext1>Her kan du ændre dine oplysninger</normaltext1>
+        <fogOverskrift1>Her kan du ændre dine oplysninger</fogOverskrift1>
         <div class="jumbotron-fluid text-center">
-            <underoverskrift1> Dine oplysninger </underoverskrift1>
+            <fogOverskrift2> Dine oplysninger </fogOverskrift2>
             <br>
             <form name = "deposit" action="${pageContext.request.contextPath}/fc/materialupdate" method = "POST">
                 <div class = " col-12 rov mb-3">
-                    <label for="adress" class = "form-label">Adresse</label>
+                    <label for="adress" class = "form-label"><foglabeltext>Adresse</foglabeltext></label>
                     <input type="text" class = "form-control" id = "adress"
                     placeholder = "Roskildevej 366" name = "adress" value ="${param.adress}">
 
-                    <label for="zipcode" class = "form-label">zipcode</label>
+                    <label for="zipcode" class = "form-label"><foglabeltext>Postnummer</foglabeltext></label>
                     <input type="text" class = "form-control" id = "zipcode"
                            placeholder = "2500" name = "zipcode" value ="${param.adress}">
 
-                    <label for="city" class = "form-label">Adresse</label>
+                    <label for="city" class = "form-label"><foglabeltext>By</foglabeltext></label>
                     <input type="text" class = "form-control" id = "city"
                            placeholder = "Roskildevej 366" name = "city" value ="${param.city}">
 
-                    <label for="phone" class = "form-label">Adresse</label>
+                    <label for="phone" class = "form-label"><foglabeltext>Telefonnummer</foglabeltext></label>
                     <input type="text" class = "form-control" id = "phone"
                            placeholder = "73924693" name = "phone" value ="${param.phone}">
                 </div>
@@ -44,7 +44,7 @@
         </div>
 
         <div>
-            <a class = "btn btn-dark" href="${sessionScope}/fc/customerpage"> Fortryd </a>
+            <a class = "btn btn-dark" href="${sessionScope}/fc/customerpage"><btn-text> Fortryd</btn-text> </a>
 
         </div>
 

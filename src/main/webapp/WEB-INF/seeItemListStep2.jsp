@@ -12,13 +12,13 @@
     </jsp:attribute>
 
     <jsp:body>
-        <h1>Fogscarporte </h1>
-        <p>Dette er prisen for din ordre <p/>
+        <fogOverskrift1>Fogscarporte </fogOverskrift1>
+        <fogOverskrift2>Dette er styklisten </fogOverskrift2>
         <br>
         <div>
-                ${requestScope.itemlist}
+            <fogtext>${requestScope.itemList}</fogtext>
 
-            <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employee"> Tilbage </a>
+            <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employee"><btn-text> Tilbage </btn-text></a>
 
         </div>
 

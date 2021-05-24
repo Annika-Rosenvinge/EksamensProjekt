@@ -10,15 +10,18 @@
     </jsp:attribute>
 
     <jsp:body>
-        <normaltext1>Hello ${sessionScope.email} </normaltext1>
-        Velkommen til Johannes Fog carporte
+        <fogOverskrift1>Hello ${sessionScope.email} </fogOverskrift1>
+        <fogOverskrift2>Velkommen til Johannes Fog carporte</fogOverskrift2>
+        <div class = "jumbotron jumbotron-fluid text-center">
+            <fogtext>Det er nu tilføjet til det til kundens ordre</fogtext>
+            <div>
+                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/addtoitemlist"> <btn-text> Tilføj mere </btn-text></a>
+                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"> <btn-text>Gå til medarbejder siden </btn-text></a>
 
-        <pricetext>Det er nu tilføjet til det til kundens ordre </pricetext>
-        <div>
-            <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/addtoitemlist"> Tilføj mere </a>
-            <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"> Gå til medarbejder siden </a>
-
+            </div>
         </div>
+
+
 
 
 
