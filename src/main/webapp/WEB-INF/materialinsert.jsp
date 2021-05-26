@@ -27,7 +27,7 @@ Kun 1 contentType er tilladt
             <fogOverskrift1> Fog Carporte </fogOverskrift1>
             <div class = "jumbotron jumbotron-fluid text-center">
                 <br>
-                <form name="deposit" action="${pageContext.request.contextPath}/fc/materialinsert" method="POST">
+                <form name="deposit" action="${pageContext.request.contextPath}/fc/materialinsertconfirmed" method="POST">
                     <div class="row mb-3">
                         <label for="materialname" class="form-label"> <foglabeltext>Materialets navn</foglabeltext></label>
                         <div class = "col-12">

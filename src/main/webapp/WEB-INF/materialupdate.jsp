@@ -24,7 +24,7 @@
             <fogOverskrift1> Fog Carporte </fogOverskrift1>
             <div class = "jumbotron-fluid text-center">
                 <br>
-                <form name="deposit" action="${pageContext.request.contextPath}/fc/materialupdate" method="POST">
+                <form name="deposit" action="${pageContext.request.contextPath}/fc/materialupdateconfirmed" method="POST">
                     <div class="row mb-3">
                         <label for="materialname" class="form-label"><foglabeltext>Materialets navn</foglabeltext></label>
                         <div class = "col-12">

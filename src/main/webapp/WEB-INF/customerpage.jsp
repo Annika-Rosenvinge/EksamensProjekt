@@ -18,7 +18,6 @@
                 bestiller første gang, ellers så bliver din ordre anulleret </fogtext>
             <div>
                 <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/customerinformation"><btn-text> Opdater information</btn-text> </a>
-                <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/seeordercustomer"> <btn-text> Se dine ordre</btn-text> </a>
                 <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/createorder"><btn-text> Ny ordre </btn-text> </a>
                 <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/calculatepricecustomer"><btn-text>Se prisen for din ordre</btn-text></a>
             </div>

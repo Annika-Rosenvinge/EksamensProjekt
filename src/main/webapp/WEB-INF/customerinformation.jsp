@@ -21,7 +21,7 @@
         <div class="jumbotron-fluid text-center">
             <fogOverskrift2> Dine oplysninger </fogOverskrift2>
             <br>
-            <form name = "deposit" action="${pageContext.request.contextPath}/fc/materialupdate" method = "POST">
+            <form name = "deposit" action="${pageContext.request.contextPath}/fc/customerinformationconfirmed" method = "POST">
                 <div class = " col-12 rov mb-3">
                     <label for="adress" class = "form-label"><foglabeltext>Adresse</foglabeltext></label>
                     <input type="text" class = "form-control" id = "adress"

@@ -40,9 +40,9 @@ public abstract class Command
         commands.put("customerinformation", new CommandProtectedPage("customerinformation", "customer"));
         commands.put("customerinformationconfirmed", new UserUpdateCommand("customerinformationconfirmed", "customer"));
         //see order customer and employee
-        commands.put("seeordercustomer", new SeeOrderCustomerCommand("seeordercustomer", "customer"));
+        //commands.put("seeordercustomer", new CommandProtectedPage("seeordercustomer", "customer"));
         commands.put("seeorderemployee", new SeeOrderEmployeeCommand("seeorderemployee", "employee"));
-        //confirmed for customer mangler
+        //confirmed for seeordercustomer mangler!!!
 
         //update status on order + confirmed
         commands.put("updatestatusonorder", new CommandProtectedPage("updatestatusonorder","employee"));
@@ -60,7 +60,7 @@ public abstract class Command
         //prisberegner for kunde
         commands.put("calculatepricecustomer", new CustomerPriceCommand("calculatepricecustomer", "customer"));
     }
-//createitemlistfororder
+
     public static Command fromPath(
             HttpServletRequest request,
             Database db)

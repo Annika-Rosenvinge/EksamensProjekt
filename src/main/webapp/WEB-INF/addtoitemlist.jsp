@@ -14,7 +14,7 @@
             <div class = "jumbotron jumbotron-fluid text-center">
                 <fogOverskrift2>Husk kundens ordre nummer og hvor stor de ønsker deres carport</fogOverskrift2>
                 <br>
-                <form name="deposit" action="${pageContext.request.contextPath}/fc/addtoitemlist" method="POST">
+                <form name="deposit" action="${pageContext.request.contextPath}/fc/addtoitemlistconfirmed" method="POST">
                     <foglabeltext>Indtast de materialer der skal bruges</foglabeltext>
 
                     <label for="materialID" class = "form-label"><foglabeltext>Materiale id</foglabeltext></label>

@@ -13,6 +13,7 @@
         <fogOverskrift1>Fogscarporte </fogOverskrift1>
         <fogOverskrift2>Beregn prisen for en kundes ordre </fogOverskrift2>
         <br>
+        <form name="deposit" action="${pageContext.request.contextPath}/fc/calculatepriceconfirmed" method="POST">
         <div>
             <fogtext>Indtast kundens ordre id for at få prisen,
                 husk at der skal være lavet en materiale liste før prisen kan beregnes</fogtext>
@@ -22,6 +23,7 @@
 
             <input class = "btn btn-primary" type = "submit" value="Submit">
         </div>
+        </form>
         <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/employeepage"> <btn-text>Tilbage</btn-text> </a>
 
 

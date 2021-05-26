@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 public class CreateOrderCommand extends CommandProtectedPage{
     OrderFacade orderFacade;
     StatusFacade statusFacade;
+    User user;
 
     public CreateOrderCommand(String pageToShow, String role) {
         super(pageToShow, role);
@@ -20,14 +21,9 @@ public class CreateOrderCommand extends CommandProtectedPage{
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException{
-        request.getContextPath();
-        String orderStatus = "new";
-        //Status status = new Status(orderStatus);
-
-        User user = new User(request.getContentType(), request.getContentType(),request.getContentType(),request.getContentType());
+        String orderStatus = "ny ordre";
         int length;
         int width;
-        int userId = user.getId();
 
         try{
             length = Integer.parseInt(request.getParameter("Vælg hvad længden skal være på din carport"));
@@ -41,7 +37,7 @@ public class CreateOrderCommand extends CommandProtectedPage{
         request.setAttribute("width", width);
 
         statusFacade.newStatus(orderStatus);
-        orderFacade.createOrder(length,width,userId,orderStatus);
+        orderFacade.createOrder(length,width,orderStatus);
         return pageToShow;
     }
 }

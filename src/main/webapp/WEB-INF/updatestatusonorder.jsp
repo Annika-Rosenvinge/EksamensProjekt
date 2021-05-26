@@ -13,7 +13,7 @@
         <fogOverskrift1> Fog Carporte </fogOverskrift1>
         <div class = "jumbotron jumbotron-fluid text-center">
             <br>
-            <form name="deposit" action="${pageContext.request.contextPath}/fc/updatestatusonorder" method="POST">
+            <form name="deposit" action="${pageContext.request.contextPath}/fc/updatestatusonorderconfirmed" method="POST">
                 <div class="row mb-3">
                     <label for="orderId" class="form-label"><foglabeltext>Ordrens id</foglabeltext></label>
                     <div class = "col-12">

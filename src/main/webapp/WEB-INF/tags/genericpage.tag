@@ -34,6 +34,7 @@
             <a class="p-2 text-dark" href="<%=request.getContextPath()%>">Home</a>
         </c:if>
         <a class="p-2 text-dark" href="#">Orders</a>
+
         <a class="p-2 text-dark" href="#">Profile</a>
         <a class="p-2 text-dark" href="#">About</a>
     </nav>
@@ -61,7 +62,7 @@
             </c:if>
             <c:if test="${sessionScope.user == customer }">
                 <a type="button" class="btn btn-sm  btn-outline-secondary"
-                    href="${pageContext.request.contextPath}/fc/orderpage">Bestil</a>
+                    href="${pageContext.request.contextPath}/fc/createorder">Bestil</a>
             </c:if>
     </div>
     </c:if>

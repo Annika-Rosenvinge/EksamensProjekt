@@ -16,7 +16,7 @@
             <fogOverskrift1>Se styklisten for en ordre</fogOverskrift1>
             <div class = "jumbotron jumbotron-fluid text-center">
                 <br>
-                <form name="deposit" action="${pageContext.request.contextPath}/fc/seeitemlist" method="POST">
+                <form name="deposit" action="${pageContext.request.contextPath}/fc/seeitemListStep2" method="POST">
                     <div class="row mb-3">
                         <fogtext>Indtast ordre id'et for at se styklisten</fogtext>
                         <label for="order_id" class="form-label"><foglabeltext>Indtast ordre nummeret</foglabeltext></label>
