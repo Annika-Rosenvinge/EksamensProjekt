@@ -44,7 +44,7 @@
         </div>
 
         <div>
-            <a class = "btn btn-dark" href="${sessionScope}/fc/customerpage"><btn-text> Fortryd</btn-text> </a>
+            <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/customerpage"><btn-text> Fortryd</btn-text> </a>
 
         </div>
 

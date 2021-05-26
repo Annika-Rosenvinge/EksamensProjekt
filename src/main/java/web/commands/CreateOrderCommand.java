@@ -19,6 +19,7 @@ public class CreateOrderCommand extends CommandProtectedPage{
         this.orderFacade = new OrderFacade(database);
     }
 
+
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException{
         String orderStatus = "ny ordre";
@@ -33,11 +34,12 @@ public class CreateOrderCommand extends CommandProtectedPage{
             request.setAttribute("ERROR","Du skal indtaste heltal");
             return "insertpage";
         }
-        request.setAttribute("lenght", length);
+        request.setAttribute("length", length);
         request.setAttribute("width", width);
 
         statusFacade.newStatus(orderStatus);
         orderFacade.createOrder(length,width,orderStatus);
         return pageToShow;
     }
+
 }

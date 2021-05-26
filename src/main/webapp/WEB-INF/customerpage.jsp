@@ -11,6 +11,7 @@
 
     <jsp:body>
         <fogOverskrift1>Hello ${sessionScope.email} </fogOverskrift1>
+        <br />
         <fogOverskrift2>Velkommen til Fog carporte</fogOverskrift2>
 
         <div class = "jumbotron-backgroundImage">
@@ -23,10 +24,6 @@
             </div>
 
         </div>
-
-
-
-
 
     </jsp:body>
 

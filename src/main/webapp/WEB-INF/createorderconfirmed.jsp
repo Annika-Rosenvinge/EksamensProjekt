@@ -26,6 +26,9 @@
                 <br>
                 <form name="deposit" action="${pageContext.request.contextPath}/fc/materialupdateconfirmed" method="POST">
                     <fogOverskrift2>Din forespørgelse er registreret</fogOverskrift2>
+                    <br/>
+                    <p>Her er en plantegning over din carport<p/>
+                    <a class = "btn btn-dark" href="${pageContext.request.contextPath}/fc/ShowSVGCommand"><btn-text>Se tegning</btn-text> </a>
                 </form>
 
                 <a class = "btn btn-dark" href="${sessionScope}/fc/createorder"><btn-text> Lav ny forespørgsel </btn-text> </a>
