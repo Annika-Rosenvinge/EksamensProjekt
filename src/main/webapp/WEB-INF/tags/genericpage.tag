@@ -24,7 +24,7 @@
     -->
 <header class="d-flex flex-column flex-md-row align-items-center p-3 pb-0 px-md-4 mb-4 bg-white border-bottom shadow-sm">
     <div class="h5 my-0 me-md-auto fw-normal">
-        <p>Demo Project for DAT 2. semester</p>
+        <p>Eksamens projekt for DAT 2 semester</p>
         <p style="font-size: larger">
             <jsp:invoke fragment="header"/>
         </p>
@@ -33,10 +33,10 @@
         <c:if test="${addHomeLink == null }">
             <a class="p-2 text-dark" href="<%=request.getContextPath()%>">Home</a>
         </c:if>
-        <a class="p-2 text-dark" href="#">Orders</a>
 
-        <a class="p-2 text-dark" href="#">Profile</a>
-        <a class="p-2 text-dark" href="#">About</a>
+        <a class="p-2 text-dark" href="${pageContext.request.contextPath}/fc/seeordercustomer">Orders</a>
+        <!--<a class="p-2 text-dark" href="#">Profile</a>-->
+        <!--<a class="p-2 text-dark" href="#">About</a>-->
     </nav>
 
     <div>
@@ -60,12 +60,10 @@
                 <a type="button" class="btn btn-sm  btn-outline-secondary"
                    href="${pageContext.request.contextPath}/fc/registerpage">Sign up</a>
             </c:if>
-            <c:if test="${sessionScope.user == customer }">
                 <a type="button" class="btn btn-sm  btn-outline-secondary"
                     href="${pageContext.request.contextPath}/fc/createorder">Bestil</a>
-            </c:if>
+        </c:if>
     </div>
-    </c:if>
 </header>
 
 <div id="body" class="container" style="min-height: 20vh;">

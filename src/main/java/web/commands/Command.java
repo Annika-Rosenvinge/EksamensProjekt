@@ -59,6 +59,8 @@ public abstract class Command
         commands.put("calculatepriceconfirmed", new CalculatePriceCommand("calulatepriceconfirmed", "employee"));
         //prisberegner for kunde
         commands.put("calculatepricecustomer", new CustomerPriceCommand("calculatepricecustomer", "customer"));
+        // SVG tegning
+        commands.put("showsvg", new ShowSVGCommand("svg","customer"));
     }
 
     public static Command fromPath(
