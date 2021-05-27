@@ -17,8 +17,9 @@
         <div>
             <fogoverskrift1>FOG CARPORT</fogoverskrift1>
 
-            <div class ="jumbotron-backgroundImage">
+            <div class ="jumbotron jumbotron-backgroundImage">
                 <fogOverskrift2> Velkommen til Fog Carporte </fogOverskrift2>
+                <br>
                 <fogtext>Her kan du bestille en carport, lige efter dine behov</fogtext>
             </div>
 
