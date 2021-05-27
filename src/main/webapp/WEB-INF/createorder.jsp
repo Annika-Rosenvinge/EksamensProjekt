@@ -17,7 +17,7 @@
         <div>
             <fogOverskrift1> Fog Carporte - Bestil din special bygget carport </fogOverskrift1>
             <br/>
-            <fogOverskrift2>Hej ${sessionScope.email} ${sessionScope.userId} <br/> Vælg en længde og bredde (i CM), så klarer vi resten</fogOverskrift2>
+            <fogOverskrift2>Hej ${sessionScope.email} ${sessionScope.userId} <br/> Vælg en længde og bredde (i cm), så klarer vi resten</fogOverskrift2>
             <div class = "jumbotron jumbotron-fluid text-center">
                 <br>
                 <form name="deposit" action="${pageContext.request.contextPath}/fc/createorderconfirmed" method="POST">

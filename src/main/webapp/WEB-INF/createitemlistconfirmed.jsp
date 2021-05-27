@@ -7,6 +7,7 @@
          Fog carport kundeside
     </jsp:attribute>
     <jsp:attribute name="footer">
+        <c:set var="addHomeLink" value="${false}" scope="request"/>
     </jsp:attribute>
 
     <jsp:body>
