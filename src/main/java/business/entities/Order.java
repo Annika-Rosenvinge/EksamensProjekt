@@ -3,6 +3,11 @@ package business.entities;
 //DO NOT CHANGE
 
 public class Order {
+
+    //Default constructor
+    public Order() {
+    }
+
     private int id; // just used to demo retrieval of autogen keys in UserMapper
     private int length;
     private int width;
